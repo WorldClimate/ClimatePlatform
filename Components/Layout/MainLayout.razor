@@ -1,0 +1,29 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="/Location/Minneapolis">Minneapolis</a>
+            <a href="/Location/NewYork">New York</a>
+            <a href="/Location/Oxford">Oxford</a>
+            <a href="/Location/Mumbai">Mumbai</a>
+            <a href="/ClimateDNA">Climate DNA</a>
+            <a href="/RealEstate">Real Estate</a>
+            <a href="/About">About Us</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>

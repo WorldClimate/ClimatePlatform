@@ -1,0 +1,31 @@
+@page "/location/{locationname}"
+@rendermode InteractiveServer
+
+<PageTitle>@LocationName</PageTitle>
+
+<h1>@LocationName</h1>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <image src="https://theworldclimate.com/images/3e404fb9ef6e80b774a98528bb94bb53.png"></image>
+    </div>
+    <div class="col-sm">
+        <h4>Severe Events Timeline</h4>
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? LocationName { get; set; }
+}
