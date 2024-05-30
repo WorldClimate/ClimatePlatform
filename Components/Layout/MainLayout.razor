@@ -1,29 +1,56 @@
 ﻿@inherits LayoutComponentBase
 
+<head>
+    <title>The World Climate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <image class="top-logo" src="assets/images/logo-transparent.png" width="55px" height="55px"></image>
+    <!-- Nav -->
+        <nav id="nav">
+            
+            <ul>
+                <li class="current"><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li>
+                    <a href="/location/overview">Locations</a>
+                    <ul>
+                        <li><a href="location/Oxford">Oxford</a></li>
+                        <li><a href="location/Mumbai">Mumbai</a></li>
+                        <li><a href="location/NewYork">New York</a></li>
+                        <li><a href="location/Sanfrancisco">San Francisco</a></li>
+                    </ul>
+                </li>
+                @* <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="services">Climate Risk Assessment</a></li>
+                        <li><a href="services">Localized Weather Forecasts</a></li>
+                        <li><a href="services">Environmental Impact Analysis</a></li>
+                        <li><a href="services">Climate Change Mitigation Strategies</a></li>
+                    </ul>
+                </li> *@
 
+            </ul>
+        </nav>
     <main>
-        <div class="top-row px-4">
-            <a href="/Location/Minneapolis">Minneapolis</a>
-            <a href="/Location/NewYork">New York</a>
-            <a href="/Location/Oxford">Oxford</a>
-            <a href="/Location/Mumbai">Mumbai</a>
-            <a href="/ClimateDNA">Climate DNA</a>
-            <a href="/RealEstate">Real Estate</a>
-            <a href="/About">About Us</a>
-        </div>
-
         <article class="content px-4">
             @Body
         </article>
+        <Footer></Footer>
     </main>
+
+    		<!-- Scripts -->
+			<script src="https://kit.fontawesome.com/4c9efe62f8.js" crossorigin="anonymous"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 </div>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div>
