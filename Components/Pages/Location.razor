@@ -4,67 +4,85 @@
 <PageTitle>@LocationDictionary</PageTitle>
 
 
-<div class="container">
-  <div class="row bottom-buffer">
-          <section class="box features">
-            <h2 class="major"><span>@LocationDictionary[@LocationName?.ToString()]</span></h2>
-          </section>
+@if (_hasCity)
+{
+  <div class="container">
+    <div class="row bottom-buffer">
+            <section class="box features">
+              <h2 class="major"><span>@LocationDictionary[@LocationName?.ToLowerInvariant()]</span></h2>
+            </section>
+    </div>
+    @if(LocationName is not null){
+    <div class="row bottom-buffer">
+          <div class="col-12 align-self-center">
+            <img class="w-100" display="block" margin="auto" src="assets/images/locations/@(LocationName?.ToLowerInvariant())/chart.png">
+            @* <image src="/assets/images/locations/newyork/chart.png" class="img-fluid"></image> *@
+          </div>
+    </div>
+    }
+    <div class="row">
+          <div class="col-6">
+              <h4>Severe Events Timeline</h4>
+              <ul class="list-group">
+                @foreach (var item in EventsDictionary[@LocationName?.ToLowerInvariant()])
+                {
+                    <li class="list-group-item">@item</li>
+                }
+              </ul>
+          </div>
+          <div class="col-6">
+              <h4>Risk Mitigation Strategies</h4>
+              <ul class="list-group">
+                @foreach (var item in RiskMitigationActivities[@LocationName?.ToLowerInvariant()])
+                {
+                    <li class="list-group-item">@item</li>
+                }
+              </ul>
+          </div>
+    </div>
   </div>
-  @if(LocationName is not null){
-  <div class="row bottom-buffer">
-        <div class="col-12 align-self-center">
-          <img display="block" margin="auto" src="assets/images/locations/@(LocationName?.ToLowerInvariant())/chart.png">
-          @* <image src="/assets/images/locations/newyork/chart.png" class="img-fluid"></image> *@
-        </div>
-  </div>
-  }
-  <div class="row">
-        <div class="col-6">
-            <h4>Severe Events Timeline</h4>
-            <ul class="list-group">
-              @foreach (var item in EventsDictionary[@LocationName?.ToString()])
-              {
-                  <li class="list-group-item">@item</li>
-              }
-            </ul>
-        </div>
-        <div class="col-6">
-            <h4>Risk Mitigation Strategies</h4>
-            <ul class="list-group">
-              @foreach (var item in RiskMitigationActivities[@LocationName?.ToString()])
-              {
-                  <li class="list-group-item">@item</li>
-              }
-            </ul>
-        </div>
-  </div>
-</div>
+}
+else
+{
+    <div class="alert alert-danger">There's no page like that here!</div>
+}
+
+
 
 @code {
     [Parameter]
     public string? LocationName { get; set; }
 
+    private bool _hasCity;
+
+    protected override void OnInitialized()
+    {
+        _hasCity = LocationDictionary.ContainsKey(LocationName?.ToLowerInvariant());
+    }
+
     public IDictionary<string, string> LocationDictionary = new Dictionary<string, string>
     {
-        { "Oxford", "Oxford" },
-        { "Mumbai", "Mumbai" },
-        { "Sanfrancisco", "San Francisco" },
-        { "NewYork", "New York" }
+        { "oxford", "Oxford" },
+        { "mumbai", "Mumbai" },
+        { "sanfrancisco", "San Francisco" },
+        { "newyork", "New York" }
     };
 
     public IDictionary<string, List<string>> EventsDictionary = new Dictionary<string, List<string>>{
-        { "Oxford", new List<string> { "July 2007 - Major Flooding","January 2024 - Storm Henk flooding", "February 202 - Storm Ciara and Storm Dennis", "Spring-Summer 2020 Drought", "July 2022 Heatwave" } },
-        { "Mumbai", new List<string> { "July 2005 - Heavy rainfall over 900 mm", "August 2017 - Severe Flooding with heavy rainfall", "May 2021 - Cyclone Tauktae",  "March 2023 - Highest Temperature in the country", "June 2023 - Over 2100 cases of heat stroke"} },
-        { "Sanfrancisco", new List<string> {"December 2016 - Heavy rain, flooding, and wind affected the area.", "January 2017 - Three atmospheric rivers, bringing significant precipitation.", "June 2017 - heat event occurred, impacting the city" } },
-        { "NewYork", new List<string> { "October 29, 2012 - Hurricane Sandy", "January 2016 - Blizzard Jonas", "August 2018 - Extreme Heat Wave", "September 2021 - Remnants of Hurricane Ida", "January 2022 - Nor'easter Storm" } }
+        { "oxford", new List<string> { "July 2007 - Major Flooding","January 2024 - Storm Henk flooding", "February 202 - Storm Ciara and Storm Dennis", "Spring-Summer 2020 Drought", "July 2022 Heatwave" } },
+        { "mumbai", new List<string> { "July 2005 - Heavy rainfall over 900 mm", "August 2017 - Severe Flooding with heavy rainfall", "May 2021 - Cyclone Tauktae",  "March 2023 - Highest Temperature in the country", "June 2023 - Over 2100 cases of heat stroke"} },
+        { "sanfrancisco", new List<string> {"December 2016 - Heavy rain, flooding, and wind affected the area.", "January 2017 - Three atmospheric rivers, bringing significant precipitation.", "June 2017 - heat event occurred, impacting the city" } },
+        { "newyork", new List<string> { "October 29, 2012 - Hurricane Sandy", "January 2016 - Blizzard Jonas", "August 2018 - Extreme Heat Wave", "September 2021 - Remnants of Hurricane Ida", "January 2022 - Nor'easter Storm" } }
     };  
 
     public IDictionary<string, List<string>> RiskMitigationActivities = new Dictionary<string, List<string>>{ 
-        { "Oxford", new List<string> { "Zero Emission Zone (ZEZ): Oxford has been piloting a Zero Emission Zone to reduce vehicle emissions in the city center, aiming to improve air quality and reduce carbon emissions.", "Flood Alleviation Schemes: Significant investments have been made in flood defenses and management, including the Oxford Flood Alleviation Scheme, which aims to reduce the risk of flooding in and around Oxford." } },
-        { "Mumbai", new List<string> { "Mumbai Climate Action Plan 2022", "Coastal Protection Measures", "Green Infrastructure", "Green Infrastructure", "Infrastructure Upgrades", "Community Engagement & Education" } },
-        { "Sanfrancisco", new List<string> {"SPUR (San Francisco Bay Area Planning and Urban Research Association) leads a comprehensive effort to retrofit buildings and infrastructure for seismic resilience", "Hazards and Climate Resilience Plan (HCR)" } },
-        { "NewYork", new List<string> { "New York City Stormwater Resiliency Plan", "Cloudburst Management", "PlaNYC: Getting Sustainability Done", "Lower Manhattan Coastal Resiliency", "The Financial District and Seaport Climate Resilience Master Plan", "Community Engagement & Education" } }
+        { "oxford", new List<string> { "Zero Emission Zone (ZEZ): Oxford has been piloting a Zero Emission Zone to reduce vehicle emissions in the city center, aiming to improve air quality and reduce carbon emissions.", "Flood Alleviation Schemes: Significant investments have been made in flood defenses and management, including the Oxford Flood Alleviation Scheme, which aims to reduce the risk of flooding in and around Oxford." } },
+        { "mumbai", new List<string> { "Mumbai Climate Action Plan 2022", "Coastal Protection Measures", "Green Infrastructure", "Green Infrastructure", "Infrastructure Upgrades", "Community Engagement & Education" } },
+        { "sanfrancisco", new List<string> {"SPUR (San Francisco Bay Area Planning and Urban Research Association) leads a comprehensive effort to retrofit buildings and infrastructure for seismic resilience", "Hazards and Climate Resilience Plan (HCR)" } },
+        { "newyork", new List<string> { "New York City Stormwater Resiliency Plan", "Cloudburst Management", "PlaNYC: Getting Sustainability Done", "Lower Manhattan Coastal Resiliency", "The Financial District and Seaport Climate Resilience Master Plan", "Community Engagement & Education" } }
     };
+
+
 
 
 

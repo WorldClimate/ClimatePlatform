@@ -56,3 +56,32 @@
 /Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.genruntimeconfig.cache
 /Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ref/ClimatePlatform.dll
 /Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.sourcelink.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/appsettings.Development.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/appsettings.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform.staticwebassets.runtime.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform.deps.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform.runtimeconfig.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform.dll
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/ClimatePlatform.pdb
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.AssemblyInfoInputs.cache
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.AssemblyInfo.cs
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.csproj.CoreCompileInputs.cache
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.MvcApplicationPartsAssemblyInfo.cache
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.sourcelink.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets.build.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets.development.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets/msbuild.ClimatePlatform.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets/msbuild.build.ClimatePlatform.props
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ClimatePlatform.props
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ClimatePlatform.props
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.dll
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/refint/ClimatePlatform.dll
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.pdb
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.genruntimeconfig.cache
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ref/ClimatePlatform.dll

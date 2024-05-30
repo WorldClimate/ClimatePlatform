@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JXGePVH7IODbxIERlWIDrLoZ87D65Aig2z6KZoAWD2M=",
+  "Hash": "VxxEM2mD6TkBR855ZbQag+//whh9BuYgz2tIUS4zlZI=",
   "Source": "ClimatePlatform",
   "BasePath": "_content/ClimatePlatform",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ClimatePlatform/wwwroot",
       "Source": "ClimatePlatform",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
       "BasePath": "_content/ClimatePlatform",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css",
       "SourceId": "ClimatePlatform",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "ClimatePlatform.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css"
+      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css"
     },
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css",
       "SourceId": "ClimatePlatform",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "ClimatePlatform.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css"
+      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css"
     },
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/app.css",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/app.css",
       "SourceId": "ClimatePlatform",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "ClimatePlatform",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "ClimatePlatform",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/favicon.png",
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/favicon.png",
       "SourceId": "ClimatePlatform",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/wwwroot/",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
       "BasePath": "_content/ClimatePlatform",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

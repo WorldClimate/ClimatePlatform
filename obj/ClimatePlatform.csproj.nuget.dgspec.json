@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ccelson/Development/Climate Platform/ClimatePlatform/ClimatePlatform.csproj": {}
+    "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/ClimatePlatform.csproj": {}
   },
   "projects": {
-    "/Users/ccelson/Development/Climate Platform/ClimatePlatform/ClimatePlatform.csproj": {
+    "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/ClimatePlatform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/ClimatePlatform.csproj",
+        "projectUniqueName": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/ClimatePlatform.csproj",
         "projectName": "ClimatePlatform",
-        "projectPath": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/ClimatePlatform.csproj",
+        "projectPath": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/ClimatePlatform.csproj",
         "packagesPath": "/Users/ccelson/.nuget/packages/",
-        "outputPath": "/Users/ccelson/Development/Climate Platform/ClimatePlatform/obj/",
+        "outputPath": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ccelson/.nuget/NuGet/NuGet.Config"
