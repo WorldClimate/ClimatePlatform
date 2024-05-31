@@ -1,0 +1,34 @@
+[
+    {
+      "ParameterKey": "ServiceName",
+      "ParameterValue": "blazorserverapp"
+    },
+    {
+      "ParameterKey": "ImageUrl",
+      "ParameterValue": "885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest"
+    },
+    {
+      "ParameterKey": "ContainerPort",
+      "ParameterValue": "8000"
+    },
+    {
+      "ParameterKey": "DesiredCount",
+      "ParameterValue": "1"
+    },
+    {
+      "ParameterKey": "ListenerRulePriority",
+      "ParameterValue": "1"
+    },
+    {
+      "ParameterKey": "LogGroupName",
+      "ParameterValue": "blazorserverapp-service"
+    },
+    {
+      "ParameterKey": "ASPNETCOREENV",
+      "ParameterValue": "Development"
+    },
+    {
+      "ParameterKey": "HealthCheckURL",
+      "ParameterValue": "/"
+    }
+  ]

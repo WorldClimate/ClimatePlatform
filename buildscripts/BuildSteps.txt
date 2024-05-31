@@ -1,0 +1,5 @@
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 885663427733.dkr.ecr.us-east-2.amazonaws.com
+
+docker build -t 885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest -f buildscripts\Dockerfile .
+
+docker push 885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest
