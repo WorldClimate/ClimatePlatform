@@ -12,3 +12,7 @@ aws cloudformation create-stack --stack-name climateplatformapp-networking-infra
 
 // Setup cloudformation stack for the service itself
 aws cloudformation create-stack --stack-name climateplatformapp-service-infra --capabilities=CAPABILITY_NAMED_IAM --template-body file://./buildScripts/ecs-service.yaml --parameters file://./buildScripts/ecs-service.json
+
+
+// Update Cluster with new image
+aws ecs update-service --cluster climateplatformapp --service climateplatformapp --force-new-deployment
