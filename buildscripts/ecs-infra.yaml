@@ -28,10 +28,10 @@ Parameters:
     Default: "10.0.4.0/24"
   PublicLoadBalancerName:
     Type: String
-    Description: Name of the public application load balancer the blazorserverapp application will use for
+    Description: Name of the public application load balancer the climateplatformapp application will use for
   PrivateLoadBalancerName:
     Type: String
-    Description: Name of the private application load balancer the blazorserverapp containers inside ecs taske will use for its communication with other containers
+    Description: Name of the private application load balancer the climateplatformapp containers inside ecs taske will use for its communication with other containers
   ECSClusterName:
     Type: String
     Description: Name of the ecs cluster that borker 2 application uses to deploy its microservices
@@ -49,7 +49,7 @@ Resources:
       CidrBlock: !Ref VPCCIDR
       Tags:
         - Key: Name
-          Value: blazorserverapp-vpc
+          Value: climateplatformapp-vpc
 
   # Two public subnets, where containers can have public IP addresses
   PublicSubnetOne:
@@ -61,7 +61,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: blazorserverapp-pub-sub1
+          Value: climateplatformapp-pub-sub1
 
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -72,7 +72,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: blazorserverapp-pub-sub2
+          Value: climateplatformapp-pub-sub2
 
   # Theree private subnets where containers will only have private
   # IP addresses, and will only be reachable by other members of the
@@ -86,7 +86,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: blazorserverapp-pri-sub1
+          Value: climateplatformapp-pri-sub1
 
   PrivateSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -97,7 +97,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: blazorserverapp-pri-sub2
+          Value: climateplatformapp-pri-sub2
 
   # Setup networking resources for the public subnets.
   # Containers in the public subnets have public IP addresses and the routing table
@@ -107,7 +107,7 @@ Resources:
     Properties:
       Tags:
         - Key: Name
-          Value: blazorserverapp-vpc-igw
+          Value: climateplatformapp-vpc-igw
 
   GatewayAttachement:
     Type: AWS::EC2::VPCGatewayAttachment
@@ -121,7 +121,7 @@ Resources:
       VpcId: !Ref "VPC"
       Tags:
         - Key: Name
-          Value: blazorserverapp-pub-route-tbl
+          Value: climateplatformapp-pub-route-tbl
 
   PublicRoute:
     Type: AWS::EC2::Route
@@ -164,7 +164,7 @@ Resources:
       SubnetId: !Ref PublicSubnetOne
       Tags:
         - Key: Name
-          Value: blazorserverapp-nat1
+          Value: climateplatformapp-nat1
   NatGatewayTwo:
     Type: AWS::EC2::NatGateway
     Properties:
@@ -172,7 +172,7 @@ Resources:
       SubnetId: !Ref PublicSubnetTwo
       Tags:
         - Key: Name
-          Value: blazorserverapp-nat2
+          Value: climateplatformapp-nat2
 
   PrivateRouteTableOne:
     Type: AWS::EC2::RouteTable
@@ -223,7 +223,7 @@ Resources:
           ToPort: 443
       Tags:
         - Key: Name
-          Value: blazorserverapp-pub-lb-access-sg
+          Value: climateplatformapp-pub-lb-access-sg
 
   PublicLoadBalancer:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -250,7 +250,7 @@ Resources:
       HealthCheckProtocol: HTTP
       HealthCheckTimeoutSeconds: 5
       HealthyThresholdCount: 2
-      Name: blazorserverapp-default-public
+      Name: climateplatformapp-public
       Port: 80
       Protocol: HTTP
       UnhealthyThresholdCount: 10
@@ -278,7 +278,7 @@ Resources:
       VpcId: !Ref "VPC"
       Tags:
         - Key: Name
-          Value: blazorserverapp-pri-lb-access-sg
+          Value: climateplatformapp-pri-lb-access-sg
 
   PrivateLoadBalancerIngressFromECS:
     Type: AWS::EC2::SecurityGroupIngress
@@ -313,7 +313,7 @@ Resources:
       HealthCheckProtocol: HTTP
       HealthCheckTimeoutSeconds: 5
       HealthyThresholdCount: 2
-      Name: blazorserverapp-default-private
+      Name: climateplatformapp-private
       Port: 80
       Protocol: HTTP
       UnhealthyThresholdCount: 10
@@ -344,7 +344,7 @@ Resources:
       VpcId: !Ref "VPC"
       Tags:
         - Key: Name
-          Value: blazorserverapp-ecs-container-sg
+          Value: climateplatformapp-ecs-container-sg
 
   EcsSecurityGroupIngressFromPublicALB:
     Type: AWS::EC2::SecurityGroupIngress
@@ -418,12 +418,12 @@ Outputs:
     Export:
       Name: PrivateSubnetTwo
   FargateContainerSecurityGroup:
-    Description: The security group to be used by blazorserverapp containers
+    Description: The security group to be used by climateplatformapp containers
     Value: !Ref FargateContainerSecurityGroup
     Export:
       Name: FargateContainerSecurityGroup
   ClusterName:
-    Description: The name of the ECS cluster created for blazorserverapp applications
+    Description: The name of the ECS cluster created for climateplatformapp applications
     Value: !Ref "ECSCluster"
     Export:
       Name: ClusterName

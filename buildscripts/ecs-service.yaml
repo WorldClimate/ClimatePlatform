@@ -1,6 +1,6 @@
 
 AWSTemplateFormatVersion: 2010-09-09
-Description: This stack will deploy the blazorserverapp on AWS Fargate,
+Description: This stack will deploy the climateplatformapp on AWS Fargate,
   hosted in a private/public subnet, behind a private/public load balancer.
 
 Parameters:
@@ -44,7 +44,7 @@ Resources:
               Service: [ecs-tasks.amazonaws.com]
             Action: ["sts:AssumeRole"]
       Path: /
-      RoleName: BlazorServerAppECSTaskExecRole
+      RoleName: ClimatePlatformAppECSTaskExecRole
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
 
@@ -65,7 +65,7 @@ Resources:
                 - - arn:aws:elasticloadbalancing
                   - !Ref "AWS::Region"
                   - !Ref "AWS::AccountId"
-                  - !Sub "loadbalancer/app/blazorserverapp*"
+                  - !Sub "loadbalancer/app/climateplatformapp*"
       PolicyName: ECSTaskRole-ALB-PermissionPolicy
       Roles:
         - !Ref ECSTaskExecutionRole

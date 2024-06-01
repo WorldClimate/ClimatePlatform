@@ -19,7 +19,9 @@ RUN dotnet build "ClimatePlatform.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "ClimatePlatform.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-FROM base AS final
+FROM --platform=linux/amd64 mcr.microsoft.com/dotnet/aspnet:8.0-bookworm-slim-amd64 AS final
 WORKDIR /app
+COPY ./Assets ./assets
+
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ClimatePlatform.dll"]

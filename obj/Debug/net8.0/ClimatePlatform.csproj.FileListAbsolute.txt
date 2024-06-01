@@ -85,3 +85,5 @@
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.pdb
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ClimatePlatform.genruntimeconfig.cache
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ref/ClimatePlatform.dll
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/buildscripts/ecs-infra.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/buildscripts/ecs-service.json

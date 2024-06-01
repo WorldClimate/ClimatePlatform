@@ -1,5 +1,14 @@
+// Login
 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 885663427733.dkr.ecr.us-east-2.amazonaws.com
 
-docker build -t 885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest -f buildscripts\Dockerfile .
+// Build the AWS Friendly AMD64 image
+docker buildx build -t 885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest -f Dockerfile.awsdeploy .
 
+// Push to ECR
 docker push 885663427733.dkr.ecr.us-east-2.amazonaws.com/climateplatformapp:latest
+
+// Setup cloudformation stack for infrastructure
+aws cloudformation create-stack --stack-name climateplatformapp-networking-infra --capabilities=CAPABILITY_NAMED_IAM --template-body file://./buildscripts/ecs-infra.yaml --parameters file://./buildscripts/ecs-infra.json
+
+// Setup cloudformation stack for the service itself
+aws cloudformation create-stack --stack-name climateplatformapp-service-infra --capabilities=CAPABILITY_NAMED_IAM --template-body file://./buildScripts/ecs-service.yaml --parameters file://./buildScripts/ecs-service.json
