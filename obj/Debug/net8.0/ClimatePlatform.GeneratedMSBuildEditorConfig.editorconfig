@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/Common/WorldMap.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21tb24vV29ybGRNYXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/Layout/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvRm9vdGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
