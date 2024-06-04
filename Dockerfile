@@ -4,8 +4,6 @@ EXPOSE 80
 
 ENV ASPNETCORE_URLS=http://*:8080
 
-COPY ./Assets ./assets
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 

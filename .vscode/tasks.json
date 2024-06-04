@@ -7,7 +7,7 @@
       {
         "label": "Sass Compile",
         "type": "shell",
-        "command": "sass Assets/sass/main.scss Assets/css/main.css",
+        "command": "sass wwwroot/sass/main.scss wwwroot/css/main.css",
         "group": "build"
       },
       {
