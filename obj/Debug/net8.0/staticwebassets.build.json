@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tZPfaTb78uXF5gg18NLxHOG+26TpBEK6TldRKh76qfA=",
+  "Hash": "e3NaCBgpL2BFw9hH42t3dLVY3MFdnxzLsEy+p6lAbCc=",
   "Source": "ClimatePlatform",
   "BasePath": "_content/ClimatePlatform",
   "Mode": "Default",
@@ -642,25 +642,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/main.js"
-    },
-    {
-      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/misc.js",
-      "SourceId": "ClimatePlatform",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
-      "BasePath": "_content/ClimatePlatform",
-      "RelativePath": "js/misc.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/js/misc.js"
     },
     {
       "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/util.js",

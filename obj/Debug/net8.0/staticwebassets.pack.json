@@ -133,10 +133,6 @@
       "PackagePath": "staticwebassets/js/main.js"
     },
     {
-      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/misc.js",
-      "PackagePath": "staticwebassets/js/misc.js"
-    },
-    {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/util.js",
       "PackagePath": "staticwebassets/js/util.js"
     },
