@@ -10,11 +10,10 @@
     <image class="top-logo" src="images/logo-transparent.png" width="55px" height="55px"></image>
     <!-- Nav -->
         <nav id="nav">
-            
             <ul>
-                <li class="current"><a href="/">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li>
+                <li class="@IsCurrentLocation("Home")"><a href="/">Home</a></li>
+                <li class="@IsCurrentLocation("About")"><a href="about">About</a></li>
+                <li class="@IsCurrentLocation("Location")">
                     <a href="/locations">Locations</a>
                     <ul>
                         <li><a href="location/Oxford">Oxford</a></li>
@@ -23,17 +22,6 @@
                         <li><a href="location/Sanfrancisco">San Francisco</a></li>
                     </ul>
                 </li>
-                @* <li>
-                    <a href="#">Services</a>
-                    <ul>
-                        <li><a href="services">Services</a></li>
-                        <li><a href="services">Climate Risk Assessment</a></li>
-                        <li><a href="services">Localized Weather Forecasts</a></li>
-                        <li><a href="services">Environmental Impact Analysis</a></li>
-                        <li><a href="services">Climate Change Mitigation Strategies</a></li>
-                    </ul>
-                </li> *@
-
             </ul>
         </nav>
     <main>
@@ -52,5 +40,33 @@
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
+			<script src="js/misc.js"></script>
 </div>
 
+@code {
+
+    [Inject]
+    public NavigationManager Navigation { get; set; }
+    private string currentLocation = "Home";
+
+    private List<string> pages = new List<string> { "About", "Location" };
+
+    protected override void OnInitialized()
+    {
+        var currentUrl = Navigation.Uri;
+        if(pages.Any<string>(page => currentUrl.ToLowerInvariant().Contains(page.ToLowerInvariant()))){
+            currentLocation = pages.FirstOrDefault(page => currentUrl.ToLowerInvariant().Contains(page.ToLowerInvariant())) ?? "Home";
+        }
+        else{
+                currentLocation = "Home";
+            }
+    }
+    private string IsCurrentLocation(string location)
+    {
+        if(currentLocation == location){
+            return "current";
+        }
+        return ""; 
+    }
+
+}

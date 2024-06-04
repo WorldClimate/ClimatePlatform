@@ -30,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvRm9vdGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/Layout/LeftSidebar.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTGVmdFNpZGViYXIucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,7 +65,3 @@ build_metadata.AdditionalFiles.CssScope =
 [/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-52up7x2rqo

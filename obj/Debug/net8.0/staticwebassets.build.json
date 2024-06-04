@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g+ukmW+uUgxP26cK0Qd+e/Qv/CDZ1P66pf41x29rO/k=",
+  "Hash": "tZPfaTb78uXF5gg18NLxHOG+26TpBEK6TldRKh76qfA=",
   "Source": "ClimatePlatform",
   "BasePath": "_content/ClimatePlatform",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css",
-      "SourceId": "ClimatePlatform",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/",
-      "BasePath": "_content/ClimatePlatform",
-      "RelativePath": "ClimatePlatform.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/bundle/ClimatePlatform.styles.css"
-    },
-    {
-      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css",
-      "SourceId": "ClimatePlatform",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/",
-      "BasePath": "_content/ClimatePlatform",
-      "RelativePath": "ClimatePlatform.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css"
-    },
     {
       "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/app.css",
       "SourceId": "ClimatePlatform",

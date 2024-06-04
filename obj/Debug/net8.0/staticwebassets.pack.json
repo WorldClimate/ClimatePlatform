@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css",
-      "PackagePath": "staticwebassets/ClimatePlatform.bundle.scp.css"
-    },
-    {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
