@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "a3Fx6WVzFgc=",
+  "dgSpecHash": "AI8ULvws5Ag=",
   "success": true,
   "projectFilePath": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/ClimatePlatform.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ccelson/.nuget/packages/blazor-apexcharts/3.3.0/blazor-apexcharts.3.3.0.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/csvhelper/32.0.3/csvhelper.32.0.3.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.authorization/8.0.2/microsoft.aspnetcore.authorization.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.components/8.0.2/microsoft.aspnetcore.components.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.components.analyzers/8.0.2/microsoft.aspnetcore.components.analyzers.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.components.forms/8.0.2/microsoft.aspnetcore.components.forms.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.components.web/8.0.2/microsoft.aspnetcore.components.web.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.aspnetcore.metadata/8.0.2/microsoft.aspnetcore.metadata.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/microsoft.jsinterop/8.0.2/microsoft.jsinterop.8.0.2.nupkg.sha512",
+    "/Users/ccelson/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,3 +1,6 @@
+@using CsvHelper;
+@using System.Globalization;
+@using System.IO;
 @page "/location/{locationname}"
 @rendermode InteractiveServer
 
@@ -12,12 +15,24 @@
               <h2 class="major"><span>@LocationDictionary[@LocationName?.ToLowerInvariant()]</span></h2>
             </section>
     </div>
-    @if(LocationName is not null){
+    @if(LocationName is not null) {
+
     <div class="row bottom-buffer">
           <div class="col-12 align-self-center">
             <img class="w-100" display="block" margin="auto" src="images/locations/@(LocationName?.ToLowerInvariant())/chart.png">
           </div>
     </div>
+    //Test Chart
+    <ApexChart TItem="MyData"
+               Title="Precipitation">
+
+        <ApexPointSeries TItem="MyData"
+                         Items="Data"
+                         Name="Net Profit"
+                         SeriesType="SeriesType.Line"
+                         XValue="e => e.DATE"
+                         YValue="e=> e.PRCP" />
+    </ApexChart>
     }
     <div class="row">
           <div class="col-6">
@@ -57,6 +72,12 @@ else
     protected override void OnInitialized()
     {
         _hasCity = LocationDictionary.ContainsKey(LocationName?.ToLowerInvariant());
+        using (var reader = new StreamReader("Data/Oxford_precip.csv"))
+        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        {
+            var datum = csv.GetRecords<MyData>();
+            Data = datum.ToList();
+        }
     }
 
     public IDictionary<string, string> LocationDictionary = new Dictionary<string, string>
@@ -81,10 +102,11 @@ else
         { "newyork", new List<string> { "New York City Stormwater Resiliency Plan", "Cloudburst Management", "PlaNYC: Getting Sustainability Done", "Lower Manhattan Coastal Resiliency", "The Financial District and Seaport Climate Resilience Master Plan", "Community Engagement & Education" } }
     };
 
-
-
-
-
-
-
+    private IEnumerable<MyData> Data { get; set; } = new List<MyData>();
+    public class MyData
+    {
+        public string? NAME  { get; set; }
+        public DateTime DATE { get; set; }
+        public decimal? PRCP { get; set; }
+    }
 }

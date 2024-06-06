@@ -12,4 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/Users/ccelson/.nuget/packages/" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)blazor-apexcharts/3.3.0/buildTransitive/Blazor-ApexCharts.props" Condition="Exists('$(NuGetPackageRoot)blazor-apexcharts/3.3.0/buildTransitive/Blazor-ApexCharts.props')" />
+  </ImportGroup>
 </Project>
