@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets/js/browser.min.js"
     },
     {
+      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/colorshifter.js",
+      "PackagePath": "staticwebassets/js/colorshifter.js"
+    },
+    {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/jquery.dropotron.min.js",
       "PackagePath": "staticwebassets/js/jquery.dropotron.min.js"
     },

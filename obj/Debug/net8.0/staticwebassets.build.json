@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e3NaCBgpL2BFw9hH42t3dLVY3MFdnxzLsEy+p6lAbCc=",
+  "Hash": "p0MS4XU4RrUhXN8yVg1y8715bK1fEbCJp9WY4mx9YT4=",
   "Source": "ClimatePlatform",
   "BasePath": "_content/ClimatePlatform",
   "Mode": "Default",
@@ -566,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/browser.min.js"
+    },
+    {
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/colorshifter.js",
+      "SourceId": "ClimatePlatform",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
+      "BasePath": "_content/ClimatePlatform",
+      "RelativePath": "js/colorshifter.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/colorshifter.js"
     },
     {
       "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/jquery.dropotron.min.js",

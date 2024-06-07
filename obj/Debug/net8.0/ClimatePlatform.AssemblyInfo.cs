@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClimatePlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb8ee2df25379d54831128496235fbaf2ae9012f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce4b9b82dee3fb1278ef430be21ed3226f2dd5cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClimatePlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClimatePlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
