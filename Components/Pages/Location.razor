@@ -20,7 +20,19 @@
       <MudTabPanel Text="City Overview">
         <div class="row bottom-buffer">
           <div class="col-6">
-            <img class="img-fluid rounded mx-auto d-block" src="images/locations/@_locationData.City.ToLowerInvariant()/overview.jpg">
+            <div class="row bottom-buffer">
+              <div class="col-12">
+                <div class="row bottom-buffer">
+                  <img class="img-fluid rounded mx-auto d-block" src="images/locations/@_locationData.City.ToLowerInvariant()/overview.jpg">
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <h4>Description</h4>
+                    <p>@_locationData.LocationInformation?.Description</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-6">
             <div class="row">
@@ -50,10 +62,7 @@
           </div>
         </div>
           <div class="row bottom-buffer">
-            <div class="col-6">
-              <h4>Description</h4>
-              <span>@_locationData.LocationInformation?.Description</span>
-            </div>
+
           </div>
       </MudTabPanel>
       <MudTabPanel Text="Climate Impact">
