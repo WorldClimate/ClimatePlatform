@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets/js/main.js"
     },
     {
+      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/tableauinterop.js",
+      "PackagePath": "staticwebassets/js/tableauinterop.js"
+    },
+    {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/util.js",
       "PackagePath": "staticwebassets/js/util.js"
     },

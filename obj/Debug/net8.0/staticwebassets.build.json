@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EXaorwZfkkgpoIWh42AIpgC70XJeY+lLJoIzyCaNhkw=",
+  "Hash": "7ZLKaKK8sg+nGAICBx1BKXI/vadBv3sAc5WIk9dKaEg=",
   "Source": "ClimatePlatform",
   "BasePath": "_content/ClimatePlatform",
   "Mode": "Default",
@@ -813,6 +813,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/main.js"
+    },
+    {
+      "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/tableauinterop.js",
+      "SourceId": "ClimatePlatform",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/",
+      "BasePath": "_content/ClimatePlatform",
+      "RelativePath": "js/tableauinterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/tableauinterop.js"
     },
     {
       "Identity": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/js/util.js",

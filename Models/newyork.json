@@ -21,6 +21,7 @@
             "Retail"
         ]
     },
+    "tableauUrl":"https://public.tableau.com/views/Climate_17189123476900/NewYork?:language=en-US",
     "risksAndMitigations":{
         "topRisk": {
             "name":"Hurricanes",

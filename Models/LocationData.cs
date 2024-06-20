@@ -6,6 +6,8 @@ public class LocationData
     public LocationInformation? LocationInformation { get; set; }
     public List<Event>? Events { get; set; }
 
+    public string? TableauUrl{ get; set; }
+
     public RisksAndMitigations? RisksAndMitigations { get; set; }
 
     public class Event{
