@@ -1,10 +1,11 @@
 {
     "city": "San Francisco",
     "country": "United States",
-    "latitude": 37.7749,
-    "longitude": -122.4194,
     "locationInformation":{
         "population": 883305,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "altitude": 16,
         "description": "San Francisco is a city in northern California and is known for its hilly landscape, iconic Golden Gate Bridge, cable cars, and colorful Victorian houses. It is a major cultural and financial center in the United States, with a thriving tech industry and a vibrant arts scene. The city offers a diverse range of attractions, including world-class museums, beautiful parks, and a bustling waterfront.",
         "history": "San Francisco was founded in 1776 by Spanish colonists and was originally named Yerba Buena. It became part of Mexico in 1821 and was later ceded to the United States in 1848 after the Mexican-American War. The city experienced rapid growth during the California Gold Rush in the mid-19th century and became a major port and center of trade. It has since played a significant role in the development of the American West and has been a hub for innovation and cultural diversity.",
         "weather": "San Francisco has a Mediterranean climate with mild, wet winters and dry summers. The city is known for its foggy and cool summers, with temperatures rarely exceeding 70 degrees Fahrenheit. Winters are mild, with average temperatures in the 50s. The city receives most of its rainfall between November and March, with the rest of the year being relatively dry.",

@@ -1,10 +1,11 @@
 {
     "city": "Oxford",
     "country": "United Kingdom",
-    "latitude": 51.7520,
-    "longitude": -1.2577,
     "locationInformation":{
         "population": 154600,
+        "latitude": 51.7520,
+        "longitude": -1.2577,
+        "altitude": 72,
         "description": "Oxford is a city in central southern England, known worldwide as the home of the University of Oxford. The city is characterized by its historic architecture, including the iconic Radcliffe Camera and the Bodleian Library. Oxford is also famous for its academic and literary heritage, with notable figures such as J.R.R. Tolkien, C.S. Lewis, and Oscar Wilde having studied or taught at the university.",
         "history": "Oxford has a rich history dating back over a thousand years. It was first settled by the Saxons in the 9th century and became an important center of learning in the 12th century with the establishment of the University of Oxford. The city played a significant role in the development of English literature, science, and politics. It has been a hub of intellectual and cultural activity ever since.",
         "weather": "Oxford has a temperate maritime climate, with mild summers and cool winters. The city experiences moderate rainfall throughout the year, with the wettest months being October and November. Snowfall is relatively rare in Oxford, with an average of 7 days of snow per year.",

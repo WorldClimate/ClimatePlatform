@@ -1,10 +1,11 @@
 {
     "city": "Mumbai",
     "country": "India",
-    "latitude": 19.0760,
-    "longitude": 72.8777,
     "locationInformation":{
         "population": 20411274,
+        "latitude": 19.0760,
+        "longitude": 72.8777,
+        "altitude": 14,
         "description": "Mumbai, formerly known as Bombay, is the capital city of the Indian state of Maharashtra. It is the most populous city in India and the fourth most populous city in the world. Mumbai is a major financial, commercial, and entertainment hub, and is known for its bustling streets, diverse culture, and iconic landmarks such as the Gateway of India and the Taj Mahal Palace Hotel.",
         "history": "Mumbai has a rich history that dates back to the ancient times. The city was originally a group of seven islands inhabited by fishing communities. It was later ruled by various dynasties and empires, including the Maurya Empire, the Chalukyas, the Rashtrakutas, and the Delhi Sultanate. In the 16th century, the Portuguese gained control of the islands and established a trading post. The islands were later ceded to the British East India Company, and Mumbai became an important trading port under British rule. After India gained independence in 1947, Mumbai emerged as the financial and commercial capital of the country.",
         "weather": "Mumbai has a tropical monsoon climate, with hot and humid summers (Mar–Jun), heavy rainfall during the monsoon season (Jun–Sep), and mild and dry winters (Nov–Feb). The city receives an average annual rainfall of about 2,200 millimeters (86 inches), with the majority of the rainfall occurring between June and September. The temperature in Mumbai ranges from 25°C (77°F) to 35°C (95°F) during the summer months and from 15°C (59°F) to 25°C (77°F) during the winter months.",
@@ -21,6 +22,7 @@
             "Real Estate"
         ]
     },
+    "tableauUrl":"https://public.tableau.com/views/Climate_17189123476900/Mumbai?:language=en-US",
     "risksAndMitigations":{
         "topRisk": {
             "name":"Flooding",

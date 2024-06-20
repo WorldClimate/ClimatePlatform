@@ -1,8 +1,6 @@
 public class LocationData
 {
     public string? City { get; set; }
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
     public LocationInformation? LocationInformation { get; set; }
     public List<Event>? Events { get; set; }
 
@@ -19,6 +17,9 @@ public class LocationData
 
 public class LocationInformation {
     public int Population { get; set; }
+    public double Altitude{ get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
     public string? Description { get; set; }
     public string? History { get; set; }
     public string? Weather { get; set; }

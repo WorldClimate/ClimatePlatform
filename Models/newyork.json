@@ -1,10 +1,11 @@
 {
     "city": "New York",
     "country": "United States",
-    "latitude": 40.7128,
-    "longitude": -74.0060,
     "locationInformation":{
         "population": 8336817,
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "altitude": 10,
         "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
         "history": "In 1624, the Dutch established the colony of New Amsterdam on Manhattan Island. The settlement was a fur trading post, but the Dutch West India Company soon realized that the land was more valuable as a colony. The Dutch built Fort Amsterdam to protect the settlement and, in 1626, Peter Minuit purchased the island of Manhattan from the Lenape people for trade goods worth about 60 guilders (or $24). The settlement was renamed New York in 1664, in honor of the Duke of York (later James II of England), and was granted city status in 1898.",
         "weather": "New York City has a humid subtropical climate and experiences all four seasons, with hot and humid summers (Jun–Sep), cool and dry autumns (Sep–Dec), cold winters (Dec–Mar), and wet springs (Mar–Jun). The city averages 234 days with at least some sunshine annually, and averages 42 inches of rain per year. Snowfall is common in the winter months, averaging 25 inches annually.",

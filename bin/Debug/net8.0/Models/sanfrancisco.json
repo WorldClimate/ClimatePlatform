@@ -1,69 +1,90 @@
 {
     "city": "San Francisco",
     "country": "United States",
-    "latitude": 37.7749,
-    "longitude": -122.4194,
     "locationInformation":{
         "population": 883305,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "altitude": 16,
         "description": "San Francisco is a city in northern California and is known for its hilly landscape, iconic Golden Gate Bridge, cable cars, and colorful Victorian houses. It is a major cultural and financial center in the United States, with a thriving tech industry and a vibrant arts scene. The city offers a diverse range of attractions, including world-class museums, beautiful parks, and a bustling waterfront.",
         "history": "San Francisco was founded in 1776 by Spanish colonists and was originally named Yerba Buena. It became part of Mexico in 1821 and was later ceded to the United States in 1848 after the Mexican-American War. The city experienced rapid growth during the California Gold Rush in the mid-19th century and became a major port and center of trade. It has since played a significant role in the development of the American West and has been a hub for innovation and cultural diversity.",
-        "weather": "San Francisco has a Mediterranean climate with mild, wet winters and dry summers. The city is known for its foggy and cool summers, with temperatures rarely exceeding 70 degrees Fahrenheit. Winters are mild, with average temperatures in the 50s. The city receives most of its rainfall between November and March, with the rest of the year being relatively dry."
+        "weather": "San Francisco has a Mediterranean climate with mild, wet winters and dry summers. The city is known for its foggy and cool summers, with temperatures rarely exceeding 70 degrees Fahrenheit. Winters are mild, with average temperatures in the 50s. The city receives most of its rainfall between November and March, with the rest of the year being relatively dry.",
+        "industries": [
+            "Technology",
+            "Finance",
+            "Tourism",
+            "Biotechnology",
+            "Healthcare",
+            "Education",
+            "Hospitality",
+            "Retail",
+            "Media",
+            "Professional Services"
+        ]
     },
+    "tableauUrl":"https://public.tableau.com/views/Climate_17189123476900/SanFrancisco?:language=en-US",
     "risksAndMitigations":{
-        "risks":[
+        "topRisk":{
+            "name":"Sea Level Rise",
+            "description":"Sea level rise is a significant risk for San Francisco due to its coastal location. As global temperatures rise, melting ice caps and thermal expansion of seawater contribute to the gradual increase in sea levels. This poses a threat to low-lying areas and coastal infrastructure, including San Francisco's waterfront. The city is already experiencing the effects of sea level rise, such as increased flooding during high tides and storm surges. To mitigate this risk, San Francisco has implemented various measures, including shoreline protection, sea walls, and sustainable urban planning. Additionally, the city is actively working on adaptation strategies to enhance its resilience to sea level rise and ensure the long-term sustainability of its coastal areas."
+        },
+        "risks": [
             {
-                "name":"Hurricane Sandy",
-                "date":"2012-10-29",
-                "description":"Hurricane Sandy was the deadliest and most destructive hurricane of the 2012 Atlantic hurricane season. Inflicting nearly $70 billion in damage, it was the second-costliest hurricane on record in the United States until surpassed by Hurricanes Harvey and Maria in 2017. The eighteenth named storm, tenth hurricane, and second major hurricane of the year, Sandy was a Category 3 storm at its peak intensity when it made landfall in Cuba. While it was a Category 2 hurricane off the coast of the Northeastern United States, the storm became the largest Atlantic hurricane on record (as measured by diameter, with winds spanning 1,100 miles)."
+                "name": "Flood",
+                "date": "2005-12-31",
+                "description": "In December 2005, San Francisco experienced a major flood event due to heavy rainfall and storm surges. Climate change contributed to the increased intensity of the storm, resulting in widespread flooding and property damage. The flood disrupted transportation, caused power outages, and posed risks to public safety. It underscored the vulnerability of coastal cities like San Francisco to sea level rise and extreme weather events, highlighting the importance of adaptation and flood mitigation strategies."
             },
             {
-                "name":"Blizzard Jonas",
-                "date":"2016-01-22",
-                "description": "Blizzard Jonas was a historic winter storm that affected the Northeastern United States, including New York, in January 2016. It brought heavy snowfall, strong winds, and blizzard conditions, resulting in significant disruptions to transportation, power outages, and closures of schools and businesses. The storm dumped over 2 feet of snow in some areas and caused widespread travel delays and cancellations. Blizzard Jonas was one of the largest snowstorms to hit New York City in recent history."
+                "name": "Drought",
+                "date": "2014-01-01",
+                "description": "From 2012 to 2017, California experienced a severe drought, including in the San Francisco Bay Area. The drought was exacerbated by climate change, with reduced precipitation and increased evaporation rates. It led to water shortages, agricultural losses, and increased risk of wildfires. The drought prompted water conservation measures, such as mandatory water restrictions and increased use of recycled water. It served as a wake-up call for the need to address water scarcity and build resilience to future droughts."
             },
             {
-                "name":"Extreme Heat Wave",
-                "date":"2018-08-01",
-                "description":"In August 2018, New York City experienced an extreme heat wave that brought record-breaking temperatures and dangerous heat indices. The heat wave lasted for several days, with temperatures soaring above 90 degrees Fahrenheit and heat indices exceeding 100 degrees Fahrenheit. The extreme heat posed health risks to residents, especially the elderly, children, and individuals with pre-existing medical conditions. The city implemented heat emergency plans, opened cooling centers, and issued heat advisories to help residents stay safe during the heat wave."
+                "name": "Wildfire",
+                "date": "2020-09-09",
+                "description": "The 2020 California wildfires were a series of wildfires that burned across the state of California, including in the San Francisco Bay Area. These wildfires were fueled by dry conditions, high temperatures, and strong winds, exacerbated by climate change. The fires destroyed homes, caused widespread evacuations, and resulted in poor air quality, posing health risks to residents. The 2020 California wildfires were some of the most devastating in the state's history."
             },
             {
-                "name": "Remnants of Hurricane Ida",
-                "date": "2021-09-01",
-                "description": "The remnants of Hurricane Ida brought heavy rain and severe flooding to New York City on September 1, 2021. The storm caused record-breaking rainfall, leading to flash floods, power outages, and transportation disruptions. The flooding overwhelmed the city's infrastructure, submerging streets, homes, and subway stations. The severe weather event highlighted the vulnerability of New York City to extreme weather events and the need for climate resilience measures."
+                "name": "Heatwave",
+                "date": "2021-06-17",
+                "description": "In June 2021, San Francisco experienced a severe heatwave, with temperatures reaching record highs. The heatwave was attributed to climate change and resulted in dangerous heat indices, putting residents at risk of heat-related illnesses. The extreme heat also strained the city's power grid and increased energy demand for cooling. The heatwave highlighted the need for climate resilience measures and adaptation strategies to protect vulnerable populations from the impacts of rising temperatures."
             },
             {
-                "name":"Nor'easter Storm",
-                "date":"2022-01-01",
-                "description":"The Nor'easter Storm in January 2022 brought heavy snowfall, strong winds, and blizzard conditions to New York City. The storm resulted in significant disruptions to transportation, power outages, and closures of schools and businesses. It dumped several inches of snow in some areas and caused travel delays and cancellations. The Nor'easter Storm was one of the major snowstorms to hit New York City in recent years."
+                "name": "Sea Level Rise",
+                "date": "2023-07-15",
+                "description": "San Francisco has been experiencing the impacts of sea level rise due to climate change. Rising sea levels have led to increased coastal erosion, flooding during high tides, and saltwater intrusion into freshwater sources. These effects pose risks to infrastructure, including roads, buildings, and utilities. The city has been implementing measures to adapt to sea level rise, such as shoreline protection, sea walls, and sustainable urban planning. However, the long-term sustainability of San Francisco's coastal areas remains a challenge."
             }
         ],
         "mitigations":[
             {
-                "name":"New York City Stormwater Resiliency Plan",
-                "description":"The New York City Stormwater Resiliency Plan is a comprehensive strategy to address the city's vulnerability to flooding and storm surges. The plan includes measures such as green infrastructure, coastal protection, and stormwater management to reduce the impact of extreme weather events and enhance the city's resilience to climate change. By investing in infrastructure upgrades and flood protection measures, the city aims to mitigate the risks of flooding and improve the overall resilience of its communities.",
-                "url":"https://www1.nyc.gov/site/dep/environment/climate-resiliency.page"
+                "name":"San Francisco Climate Action Strategy",
+                "description":"The San Francisco Climate Action Strategy is a comprehensive plan to address climate change and reduce greenhouse gas emissions in the city. The strategy includes initiatives such as promoting renewable energy, improving energy efficiency in buildings, expanding public transportation, and implementing sustainable waste management practices. By implementing these measures, San Francisco aims to mitigate the impacts of climate change and create a more sustainable and resilient city.",
+                "url":"https://sfenvironment.org/climate-action-strategy"
             },
             {
-                "name":"Cloudburst Management",
-                "description":""
+                "name":"Resilient Shoreline",
+                "description":"The Resilient Shoreline initiative focuses on protecting San Francisco's coastal areas from the impacts of sea level rise and storm surges. It includes measures such as building sea walls, restoring natural habitats, and implementing sustainable urban planning practices. By enhancing the resilience of the shoreline, San Francisco aims to reduce the risks of flooding and coastal erosion and ensure the long-term sustainability of its coastal communities.",
+                "url":"https://sfwater.org/index.aspx?page=1096"
             },
             {
-                "name":"PlaNYC: Getting Sustainability Done",
-                "description":"PlaNYC: Getting Sustainability Done is a comprehensive sustainability plan for New York City. It was launched in 2007 with the goal of making the city more sustainable and resilient to the challenges of climate change. The plan focuses on reducing greenhouse gas emissions, improving air quality, conserving water resources, enhancing green spaces, and promoting sustainable transportation and energy efficiency. PlaNYC includes a wide range of initiatives and policies to achieve these goals, such as expanding public transportation, retrofitting buildings for energy efficiency, and increasing the use of renewable energy sources. By implementing PlaNYC, New York City aims to create a greener, healthier, and more sustainable future for its residents."
+                "name":"Urban Forest Plan",
+                "description":"The Urban Forest Plan aims to increase the city's tree canopy cover and enhance the benefits of urban forests in mitigating climate change. The plan includes initiatives such as planting more trees, preserving existing trees, and implementing sustainable tree care practices. By expanding the urban forest, San Francisco aims to reduce greenhouse gas emissions, improve air quality, and enhance the overall resilience of the city.",
+                "url":"https://sfenvironment.org/urban-forest-plan"
             },
             {
-                "name":"The Financial District and Seaport Climate Resilience Master Plan",
-                "description":""
+                "name":"Zero Waste",
+                "description":"The Zero Waste initiative focuses on reducing waste generation and promoting recycling and composting in San Francisco. It includes measures such as implementing recycling and composting programs, promoting sustainable packaging, and encouraging waste reduction practices. By achieving zero waste, San Francisco aims to minimize the environmental impacts of waste disposal, conserve resources, and mitigate climate change.",
+                "url":"https://sfenvironment.org/zero-waste"
             },
             {
-                "name":"NYC CoolRoofs",
-                "description":"NYC CoolRoofs is a program that aims to reduce energy consumption and mitigate the urban heat island effect in New York City by coating rooftops with reflective materials. By applying cool roof coatings, buildings can reflect more sunlight and absorb less heat, resulting in lower energy costs for cooling and reduced greenhouse gas emissions. The program offers incentives and technical assistance to building owners and managers to encourage the adoption of cool roofs. Additionally, NYC CoolRoofs helps create green jobs and improve the overall sustainability and resilience of the city's built environment.",
-                "url":"https://www1.nyc.gov/site/sustainability/campaigns/coolroofs.page"
+                "name":"Clean Transportation",
+                "description":"The Clean Transportation initiative aims to promote sustainable and low-emission transportation options in San Francisco. It includes initiatives such as expanding electric vehicle infrastructure, improving public transportation, and encouraging active transportation modes like walking and cycling. By transitioning to clean transportation, San Francisco aims to reduce greenhouse gas emissions, improve air quality, and enhance the overall resilience of the transportation system.",
+                "url":"https://sfenvironment.org/clean-transportation"
             },
             {
-                "name":"Community Engagement & Education",
-                "description":"",
-                "url":""
+                "name":"Climate Resilience",
+                "description":"The Climate Resilience initiative focuses on enhancing the city's resilience to climate change impacts and extreme weather events. It includes measures such as improving emergency preparedness, implementing climate adaptation strategies, and promoting community resilience. By building climate resilience, San Francisco aims to protect vulnerable populations, infrastructure, and natural resources from the impacts of climate change.",
+                "url":"https://sfenvironment.org/climate-resilience"
             }
         ]
     }

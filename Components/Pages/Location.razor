@@ -28,6 +28,7 @@
                 <h4>Key Geopolitical Facts</h4>
                 <p>
                   <b>Population</b> - @_locationData.LocationInformation?.Population.ToString("#,#", CultureInfo.InvariantCulture)<br>
+                  <b>Altitude</b> - @_locationData.LocationInformation?.Altitude.ToString("#,#", CultureInfo.InvariantCulture) meters<br> 
                   <b>Industries</b> - @string.Join(", ", @_locationData.LocationInformation?.Industries)
                 </p>
               </div>
