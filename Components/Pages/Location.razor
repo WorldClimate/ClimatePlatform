@@ -1,5 +1,6 @@
 @page "/location/{locationname}"
 @using System.Text.Json
+@using System.Globalization
 @rendermode InteractiveServer
 
 <PageTitle>@_locationData?.City?.ToLowerInvariant()</PageTitle>
@@ -25,7 +26,7 @@
               <div class="col-12">
                 <h4>Key Geopolitical Facts</h4>
                 <p>
-                  <b>Population</b> - @_locationData.LocationInformation?.Population<br>
+                  <b>Population</b> - @_locationData.LocationInformation?.Population.ToString("#,#", CultureInfo.InvariantCulture)<br>
                   <b>Industries</b> - @string.Join(", ", @_locationData.LocationInformation?.Industries)
                 </p>
               </div>
