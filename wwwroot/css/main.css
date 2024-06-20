@@ -208,7 +208,7 @@ header > p {
 .container {
   margin: 0 auto;
   max-width: 100%;
-  width: 64em;
+  width: 128em;
 }
 @media screen and (max-width: 1680px) {
   .container {
@@ -1354,8 +1354,8 @@ header > p {
 }
 .image img {
   display: block;
-  max-height: 300px;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 .image:before {

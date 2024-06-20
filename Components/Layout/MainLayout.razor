@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="css/main.css" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
 </head>
 <div class="page">
     <image class="top-logo" src="images/logo-transparent.png" width="55px" height="55px"></image>
@@ -25,6 +26,7 @@
             </ul>
         </nav>
     <main>
+        <MudThemeProvider/> 
         <article class="content">
             @Body
         </article>
@@ -40,6 +42,7 @@
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
+            <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 
             <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6BT84E97S"></script>

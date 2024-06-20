@@ -1,45 +1,108 @@
 @page "/location/{locationname}"
+@using System.Text.Json
 @rendermode InteractiveServer
 
-<PageTitle>@LocationDictionary[@LocationName?.ToLowerInvariant()]</PageTitle>
+<PageTitle>@_locationData?.City?.ToLowerInvariant()</PageTitle>
 
 
 @if (_hasCity)
 {
-  <div class="container">
+  <div class="container w-75">
     <div class="row bottom-buffer">
             <section class="box features">
-              <h2 class="major"><span>@LocationDictionary[@LocationName?.ToLowerInvariant()]</span></h2>
+              <h2 class="major"><span>@_locationData?.City?.ToLowerInvariant()</span></h2>
             </section>
     </div>
-    @if(LocationName is not null){
     <div class="row bottom-buffer">
-          <div class="col-12 align-self-center">
-            <img class="w-100" display="block" margin="auto" src="images/locations/@(LocationName?.ToLowerInvariant())/chart.png">
-          </div>
-    </div>
-    }
-    <div class="row">
+    <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6" Centered="true">
+      <MudTabPanel Text="City Overview">
+        <div class="row bottom-buffer">
           <div class="col-6">
+            <img class="img-fluid rounded mx-auto d-block" src="images/locations/@_locationData.City.ToLowerInvariant()/overview.jpg">
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-12">
+                <h4>Key Geopolitical Facts</h4>
+                <p>
+                  <b>Population</b> - @_locationData.LocationInformation?.Population<br>
+                  <b>Industries</b> - @string.Join(", ", @_locationData.LocationInformation?.Industries)
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h4>Weather</h4>
+                <p>
+                  @_locationData.LocationInformation?.Weather<br>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h4>History</h4>
+                <span>@_locationData.LocationInformation?.History</span>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row bottom-buffer">
+            <div class="col-12">
+              <h4>Description</h4>
+              <span>@_locationData.LocationInformation?.Description</span>
+            </div>
+          </div>
+      </MudTabPanel>
+      <MudTabPanel Text="Climate Impact">
+        @if(LocationName is not null){
+        <div class="row bottom-buffer">
+              <div class="col-12 align-self-center">
+                <img class="img-fluid rounded mx-auto d-block" src="images/locations/@_locationData?.City?.ToLowerInvariant()/chart.png">
+              </div>
+        </div>
+      }
+      </MudTabPanel>
+      <MudTabPanel Text="Risks & Mitigation">
+          <div class="row">
+            <div class="col-6">
+                <h4>Top Risk</h4>
+                <p><b>@_locationData?.RisksAndMitigations.TopRisk.Name</b>
+                <br>@_locationData?.RisksAndMitigations.TopRisk.Description</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
               <h4>Severe Events Timeline</h4>
               <ul class="list-group">
-                @foreach (var item in EventsDictionary[@LocationName?.ToLowerInvariant()])
+                @foreach (var item in @_locationData?.RisksAndMitigations?.Risks)
                 {
-                    <li class="list-group-item">@item</li>
+                    if(@item.Url is not null){
+                      <li class="list-group-item"><a href="@item.Url"><b>@item.Name - @item.Date.ToString("d")</b></a>@if(item.Description is not null){<span> - @item.Description</span>}</li>
+                    }else{
+                        <li class="list-group-item"><b>@item.Name - @item.Date.ToString("d")</b> @if(item.Description is not null){<span> - @item.Description</span>}</li>
+                    }
                 }
-              </ul>
+              </ul> 
+            </div>
+            <div class="col-6">
+                <h4>Risk Mitigation Strategies</h4>
+                <ul class="list-group">
+                  @foreach (var item in @_locationData?.RisksAndMitigations?.Mitigations)
+                  {
+                    if(@item.Url is not null){
+                      <li class="list-group-item"><a href="@item.Url"><b>@item.Name</b></a>@if(item.Description is not null){<span> - @item.Description</span>}</li>
+                    }else{
+                        <li class="list-group-item"><b>@item.Name</b> @if(item.Description is not null){<span> - @item.Description</span>}</li>
+                    }
+                  }
+                </ul>
+            </div>
           </div>
-          <div class="col-6">
-              <h4>Risk Mitigation Strategies</h4>
-              <ul class="list-group">
-                @foreach (var item in RiskMitigationActivities[@LocationName?.ToLowerInvariant()])
-                {
-                    <li class="list-group-item">@item</li>
-                }
-              </ul>
-          </div>
-    </div>
+            
+      </MudTabPanel>
+    </MudTabs>
   </div>
+    </div>
 }
 else
 {
@@ -54,9 +117,15 @@ else
 
     private bool _hasCity;
 
+    private LocationData? _locationData;
+
     protected override void OnInitialized()
     {
-        _hasCity = LocationDictionary.ContainsKey(LocationName?.ToLowerInvariant());
+        _hasCity = LocationName != null && LocationDictionary.ContainsKey(LocationName.ToLowerInvariant());
+        if(_hasCity){
+          string jsonString = File.ReadAllText($"Models/{LocationName?.ToLowerInvariant()}.json");
+          _locationData = JsonSerializer.Deserialize<LocationData>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
     }
 
     public IDictionary<string, string> LocationDictionary = new Dictionary<string, string>

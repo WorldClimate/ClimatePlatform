@@ -4,4 +4,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MudBlazor" Version="6.20.0" />
+  </ItemGroup>
 </Project>

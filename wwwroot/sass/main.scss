@@ -242,7 +242,7 @@
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 64em;
+		width: 128em;
 
 		@include breakpoint('<=xlarge') {
 			width: 75em;
@@ -300,7 +300,8 @@
 
 		img {
 			display: block;
-			width: 100%;
+			max-width: 100%;
+			height: auto;
 			border-radius: 8px;
 		}
 

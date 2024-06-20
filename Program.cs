@@ -1,5 +1,6 @@
 using ClimatePlatform.Components;
 using Microsoft.Extensions.FileProviders;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddHealthChecks();
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 

@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css",
+      "PackagePath": "staticwebassets/ClimatePlatform.bundle.scp.css"
+    },
+    {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
@@ -41,8 +45,12 @@
       "PackagePath": "staticwebassets/images/locations/mumbai/chart.png"
     },
     {
-      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/images/locations/newyork/chart.png",
-      "PackagePath": "staticwebassets/images/locations/newyork/chart.png"
+      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/images/locations/new york/chart.png",
+      "PackagePath": "staticwebassets/images/locations/new york/chart.png"
+    },
+    {
+      "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/images/locations/new york/overview.jpg",
+      "PackagePath": "staticwebassets/images/locations/new york/overview.jpg"
     },
     {
       "Id": "/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/wwwroot/images/locations/oxford/chart.png",
