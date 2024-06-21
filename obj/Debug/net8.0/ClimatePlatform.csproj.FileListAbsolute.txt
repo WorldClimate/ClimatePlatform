@@ -85,8 +85,6 @@
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/ref/ClimatePlatform.dll
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/buildscripts/ecs-infra.json
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/buildscripts/ecs-service.json
-/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/Components/Pages/Location.razor.rz.scp.css
-/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/obj/Debug/net8.0/scopedcss/projectbundle/ClimatePlatform.bundle.scp.css
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Microsoft.AspNetCore.Authorization.dll
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Microsoft.AspNetCore.Components.dll
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Microsoft.AspNetCore.Components.Forms.dll
