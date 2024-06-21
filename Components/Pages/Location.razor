@@ -4,7 +4,7 @@
 @inject IJSRuntime jsRuntime
 @rendermode InteractiveServer
 
-<PageTitle>@_locationData?.City?.ToLowerInvariant()</PageTitle>
+<PageTitle>@_locationData?.City</PageTitle>
 
 
 @if (_hasCity)
@@ -12,7 +12,7 @@
   <div class="container w-75">
     <div class="row bottom-buffer">
             <section class="box features">
-              <h2 class="major"><span>@_locationData?.City?.ToLowerInvariant()</span></h2>
+              <h2 class="major"><span>@_locationData?.City</span></h2>
             </section>
     </div>
     <div class="row bottom-buffer">
