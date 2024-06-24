@@ -80,7 +80,7 @@
   }
 
   .TooltipContent {
-    @apply text-foreground;
+    @apply text-popover-foreground bg-popover;
     border-radius: 4px;
     padding: 10px 15px;
     font-size: 15px;
@@ -107,7 +107,7 @@
   }
 
   .TooltipArrow {
-    fill: white;
+    @apply fill-popover;
   }
 
   @keyframes slideUpAndFade {
