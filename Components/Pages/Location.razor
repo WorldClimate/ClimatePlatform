@@ -89,9 +89,9 @@
                 @foreach (var item in @_locationData?.RisksAndMitigations?.Risks)
                 {
                     if(@item.Url is not null){
-                      <li class="list-group-item"><a href="@item.Url"><b>@item.Name - @item.Date.ToString("d")</b></a>@if(item.Description is not null){<span> - @item.Description</span>}</li>
+                        <li class="list-group-item"><a href="@item.Url"><b>@item.Name - @item.GetDate()</b></a>@if(item.Description is not null){<span> - @item.Description</span>}</li>
                     }else{
-                        <li class="list-group-item"><b>@item.Name - @item.Date.ToString("d")</b> @if(item.Description is not null){<span> - @item.Description</span>}</li>
+                        <li class="list-group-item"><b>@item.Name - @item.GetDate()</b> @if(item.Description is not null){<span> - @item.Description</span>}</li>
                     }
                 }
               </ul> 
@@ -158,30 +158,11 @@ else
 
     public IDictionary<string, string> LocationDictionary = new Dictionary<string, string>
     {
+        { "jakarta", "Jakarta" },
+        { "lagos", "Lagos" },
         { "oxford", "Oxford" },
         { "mumbai", "Mumbai" },
         { "sanfrancisco", "San Francisco" },
         { "newyork", "New York" }
     };
-
-    public IDictionary<string, List<string>> EventsDictionary = new Dictionary<string, List<string>>{
-        { "oxford", new List<string> { "July 2007 - Major Flooding","January 2024 - Storm Henk flooding", "February 202 - Storm Ciara and Storm Dennis", "Spring-Summer 2020 Drought", "July 2022 Heatwave" } },
-        { "mumbai", new List<string> { "July 2005 - Heavy rainfall over 900 mm", "August 2017 - Severe Flooding with heavy rainfall", "May 2021 - Cyclone Tauktae",  "March 2023 - Highest Temperature in the country", "June 2023 - Over 2100 cases of heat stroke"} },
-        { "sanfrancisco", new List<string> {"December 2016 - Heavy rain, flooding, and wind affected the area.", "January 2017 - Three atmospheric rivers, bringing significant precipitation.", "June 2017 - heat event occurred, impacting the city" } },
-        { "newyork", new List<string> { "October 29, 2012 - Hurricane Sandy", "January 2016 - Blizzard Jonas", "August 2018 - Extreme Heat Wave", "September 2021 - Remnants of Hurricane Ida", "January 2022 - Nor'easter Storm" } }
-    };  
-
-    public IDictionary<string, List<string>> RiskMitigationActivities = new Dictionary<string, List<string>>{ 
-        { "oxford", new List<string> { "Zero Emission Zone (ZEZ): Oxford has been piloting a Zero Emission Zone to reduce vehicle emissions in the city center, aiming to improve air quality and reduce carbon emissions.", "Flood Alleviation Schemes: Significant investments have been made in flood defenses and management, including the Oxford Flood Alleviation Scheme, which aims to reduce the risk of flooding in and around Oxford." } },
-        { "mumbai", new List<string> { "Mumbai Climate Action Plan 2022", "Coastal Protection Measures", "Green Infrastructure", "Green Infrastructure", "Infrastructure Upgrades", "Community Engagement & Education" } },
-        { "sanfrancisco", new List<string> {"SPUR (San Francisco Bay Area Planning and Urban Research Association) leads a comprehensive effort to retrofit buildings and infrastructure for seismic resilience", "Hazards and Climate Resilience Plan (HCR)" } },
-        { "newyork", new List<string> { "New York City Stormwater Resiliency Plan", "Cloudburst Management", "PlaNYC: Getting Sustainability Done", "Lower Manhattan Coastal Resiliency", "The Financial District and Seaport Climate Resilience Master Plan", "Community Engagement & Education" } }
-    };
-
-
-
-
-
-
-
 }

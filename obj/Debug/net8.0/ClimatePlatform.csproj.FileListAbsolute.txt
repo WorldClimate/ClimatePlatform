@@ -103,3 +103,5 @@
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Models/newyork.json
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Models/oxford.json
 /Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Models/sanfrancisco.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Models/jakarta.json
+/Users/ccelson/Development/Climate Platform/Climate Platform/ClimatePlatform/bin/Debug/net8.0/Models/lagos.json

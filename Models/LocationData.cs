@@ -33,7 +33,12 @@ public class RisksAndMitigations{
     public TopRisk TopRisk{ get; set; }
 
     public class Risk{
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
+        public string GetDate() {
+                if (Date != null)
+                    return Date?.ToString("d");
+                else return "Ongoing";
+        }
         public string? Name { get; set; }
         public string? Description { get; set; }
         public string? Url { get; set; }
