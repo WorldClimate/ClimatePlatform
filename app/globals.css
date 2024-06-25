@@ -59,13 +59,13 @@
   }
 
   #header {
-    @apply bg-white text-center font-semibold uppercase py-[2em] mx-auto;
+    @apply text-center font-semibold uppercase py-[2em] mx-auto;
   }
   #header .logo {
-    @apply relative text-center border-t-[1px] border-t-[#e7eae8] top-[0.65em];
+    @apply relative text-center border-t-4 border-t-[#e7eae8] top-[0.65em];
   }
   #header .logo div {
-    @apply bg-white relative inline-block px-[1.5em] -top-[0.65em];
+    @apply bg-background relative inline-block px-[1.5em] -top-4 md:-top-5;
   }
   #header .logo h1 {
     @apply inline;
@@ -85,7 +85,6 @@
     padding: 10px 15px;
     font-size: 15px;
     line-height: 1;
-    background-color: white;
     box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
       hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
     user-select: none;

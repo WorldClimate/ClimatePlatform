@@ -112,7 +112,7 @@ export const WavyBackground = ({
   return (
     <div
       className={cn(
-        "h-screen",
+        "h-screen relative -z-10",
         containerClassName
       )}
     >

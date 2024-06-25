@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/Navbar";
+import MobileNav from "@/components/MobileNav";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -61,6 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <Script src="https://kit.fontawesome.com/1dce5cdcc1.js"/>
+      </head>
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
@@ -68,6 +74,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar/>
+          <MobileNav/>
           {children}
         </ThemeProvider>
       </body>

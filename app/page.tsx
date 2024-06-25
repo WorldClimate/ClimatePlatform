@@ -6,6 +6,9 @@ import dynamic from "next/dynamic";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Map from "@/components/Map";
+import Link from "next/link";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -15,7 +18,7 @@ const World = dynamic(
 );
 
 export default function Page() {
-  const {theme} = useTheme();
+  const { theme } = useTheme();
   const router = useRouter();
   const globeConfig = {
     pointSize: 4,
@@ -404,43 +407,91 @@ export default function Page() {
   ];
 
   return (
-    <WavyBackground
-    backgroundFill={theme === "dark" ? "black" : "#ffffff"}
-    className="max-w-4xl mx-auto overflow-hidden"
-    onClick={() => router.push("/main/home")}
-    >
-    <div className="flex flex-row items-center justify-center py-5 h-screen md:h-auto relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[43rem] px-4">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-          <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-center">
-            The World Climate
-          </h2>
+    <div className="min-h-screen">
+      <WavyBackground
+        backgroundFill={theme === "dark" ? "black" : "#ffffff"}
+        className="w-screen mx-auto overflow-hidden"
+        onClick={() => router.push("/main/home")}
+      >
+        <div className="w-full mt-20 md:mt-0">
+          <div className="flex flex-col md:flex-row gap-10 justify-center items-center mx-auto w-full overflow-hidden h-full md:h-[43rem] px-4">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="w-full md:w-[600px]"
+            >
+              <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-center">
+                The World Climate
+              </h2>
 
-          <p className="text-base md:text-lg mt-4 font-normal text-center">
-            Improving our world&apos;s outlook by providing resources and
-            tooling for everyone to examine the future of climate in their own
-            backyard.
-            <span className="mt-2 block">Click to continue</span>
+              <p className="text-base md:text-lg mt-4 font-normal text-center">
+                Improving our world&apos;s outlook by providing resources and
+                tooling for everyone to examine the future of climate in their
+                own backyard.
+              </p>
+            </motion.div>
+            <div className=" h-72 md:h-[500px] w-[500px] relative z-10">
+              <World data={sampleArcs} globeConfig={globeConfig} />
+            </div>
+          </div>
+        </div>
+      </WavyBackground>
+      <header id="header">
+        <div className="logo container">
+          <div>
+            <h1>
+              <Link
+                href={"/main/home"}
+                id="logo"
+                className="text-muted-foreground text-lg md:text-4xl hover:text-blue-800 dark:hover:text-orange-400"
+              >
+                The World Climate
+              </Link>
+            </h1>
+          </div>
+        </div>
+        <div>
+          <Image
+            src={"/images/logo-transparent.png"}
+            alt="logo"
+            width={1024}
+            height={1024}
+            className="w-24 h-20 md:w-48 md:h-44 mx-auto dark:invert"
+          />
+        </div>
+      </header>
+      <Map />
+      <div className="flex flex-col md:flex-row gap-16 items-center w-10/12 mx-auto bg-[url('/images/overlay.png')">
+        <Image
+          src={"/images/nasa-i9w4Uy1pU-s-unsplash.jpg"}
+          alt="cyclone"
+          width={5600}
+          height={7200}
+          className="w-[550px] h-[625px] object-cover rounded-2xl"
+        />
+        <div className="w-full">
+          <h2 className="uppercase font-semibold text-4xl mb-3 md:mb-5">
+            Welcome to the World Climate.com
+          </h2>
+          <p className="flex gap-5">
+            <i className="mt-5 text-primary fa-solid fa-earth-americas fa-xl md:fa-2xl"></i>
+            <span className="text-muted-foreground">
+              A SITE WHERE WE&apos;RE LOOKING TO IMPROVE OUR WORLDS OUTLOOK BY
+              PROVIDING RESOURCES AND TOOLING FOR EVERYONE TO EXAMINE THE FUTURE
+              OF CLIMATE IN THEIR OWN BACKYARD
+            </span>
           </p>
-        </motion.div>
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
     </div>
-    </WavyBackground>
   );
 }

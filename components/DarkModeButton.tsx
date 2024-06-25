@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,9 +11,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/navigation";
 
 export default function DarkModeButton() {
-  const { setTheme, theme } = useTheme()
+  const { setTheme, theme } = useTheme();
+  const router = useRouter();
 
   return (
     <DropdownMenu>
@@ -25,16 +27,40 @@ export default function DarkModeButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem className={`${theme === "light" && "bg-zinc-300 text-accent-foreground"}`} onClick={() => setTheme("light")}>
+        <DropdownMenuItem
+          className={`${
+            theme === "light" && "bg-zinc-300 text-accent-foreground"
+          }`}
+          onClick={() => {
+            router.refresh();
+            setTheme("light");
+          }}
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem className={`${theme === "dark" && "bg-zinc-700 text-accent-foreground"}`} onClick={() => setTheme("dark")}>
+        <DropdownMenuItem
+          className={`${
+            theme === "dark" && "bg-zinc-700 text-accent-foreground"
+          }`}
+          onClick={() => {
+            router.refresh();
+            setTheme("dark");
+          }}
+        >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem className={`${theme === "system" && "bg-muted text-accent-foreground"}`} onClick={() => setTheme("system")}>
+        <DropdownMenuItem
+          className={`${
+            theme === "system" && "bg-muted text-accent-foreground"
+          }`}
+          onClick={() => {
+            router.refresh();
+            setTheme("system");
+          }}
+        >
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

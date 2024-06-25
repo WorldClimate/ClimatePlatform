@@ -20,58 +20,80 @@ import DarkModeButton from "./DarkModeButton";
 const locations: { title: string; href: string; description: string }[] = [
   {
     title: "OXFORD",
-    href: "/main/oxford",
+    href: "/location/oxford",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
     title: "MUMBAI",
-    href: "/main/mumbai",
+    href: "/location/mumbai",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
     title: "NEW YORK",
-    href: "/main/new-york",
+    href: "/location/new-york",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
     title: "SAN FRANCISCO",
-    href: "/main/san-francisco",
+    href: "/location/san-francisco",
     description: "Visually or semantically separates content.",
   },
 ];
 
 export function Navbar() {
-    const pathName = usePathname();
+  const pathName = usePathname();
   return (
     <div className="w-full hidden md:flex h-16 bg-[url('/images/overlay.png')]">
       <Image
-      src={"/images/logo-transparent.png"}
-      alt="logo"
-      width={1024}
-      height={1024}
-      className="w-20 h-20 relative"
+        src={"/images/logo-transparent.png"}
+        alt="logo"
+        width={1024}
+        height={1024}
+        className="w-16 h-16 relative top-4 left-2 dark:invert"
       />
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="gap-5">
           <NavigationMenuItem>
-            <Link href="/main/home" legacyBehavior passHref>
-              <NavigationMenuLink  className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${pathName === "/main/home" ? "bg-primary hover:bg-primary" : "bg-transparent hover:bg-[#C1CAC5]"} ${navigationMenuTriggerStyle()}`}>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                  pathName === "/main/home"
+                    ? "bg-primary hover:bg-primary"
+                    : "bg-transparent hover:bg-[#C1CAC5]"
+                } ${navigationMenuTriggerStyle()}`}
+              >
                 HOME
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/main/about" legacyBehavior passHref>
-              <NavigationMenuLink className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${pathName === "/main/about" ? "bg-primary hover:bg-primary" : "bg-transparent hover:bg-[#C1CAC5]"} ${navigationMenuTriggerStyle()}`}>
+            <Link href="/about" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                  pathName === "/main/about"
+                    ? "bg-primary hover:bg-primary"
+                    : "bg-transparent hover:bg-[#C1CAC5]"
+                } ${navigationMenuTriggerStyle()}`}
+              >
                 ABOUT
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${pathName.includes("/main/locations") ? "bg-primary hover:bg-primary" : "bg-transparent hover:bg-[#C1CAC5]"}`}>LOCATIONS</NavigationMenuTrigger>
+            <NavigationMenuTrigger
+              className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                pathName.includes("/main/locations")
+                  ? "bg-primary hover:bg-primary"
+                  : "bg-transparent hover:bg-[#C1CAC5]"
+              }`}
+            >
+              <NavigationMenuLink href="/locations">
+                LOCATIONS
+              </NavigationMenuLink>
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {locations.map((location) => (
@@ -86,9 +108,9 @@ export function Navbar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-            <DarkModeButton/>
-          </NavigationMenuItem> */}
+          <NavigationMenuItem>
+            <DarkModeButton />
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </div>
