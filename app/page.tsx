@@ -9,6 +9,20 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Map from "@/components/Map";
 import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -19,7 +33,9 @@ const World = dynamic(
 
 export default function Page() {
   const { theme } = useTheme();
+  const [filter, setFilter] = useState("2017");
   const router = useRouter();
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -406,6 +422,31 @@ export default function Page() {
     },
   ];
 
+  const years = [
+    "1995",
+    "1996",
+    "1997",
+    "1998",
+    "1999",
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+  ];
   return (
     <div className="min-h-screen">
       <WavyBackground
@@ -469,7 +510,41 @@ export default function Page() {
           />
         </div>
       </header>
-      <Map />
+      <div className="md:mt-5 flex flex-col w-screen justify-center items-center">
+        <div className="flex flex-wrap justify-center items-center gap-7 lg:gap-52 mb-9 sm:mb-5 md:mb-9">
+          <div className="flex flex-col items-center">
+            <h3 className="font-semibold text-base md:text-lg">
+              Vulnerability
+            </h3>
+            <div className="flex items-center gap-1">
+              <h4 className="text-xs md:text-base">Worse</h4>
+              <div className="w-20 h-2 md:w-52 md:h-3 bg-gradient-to-r from-[#FF6405] to-[#16A34A] rounded-sm" />
+              <h4 className="text-xs md:text-base">Better</h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-start">
+            <Label className="ml-1 text-sm md:text-base">Year</Label>
+            <Select onValueChange={(value) => setFilter(value)}>
+              <SelectTrigger className="w-[50px] md:w-[180px] h-[14px] relative z-10">
+                <SelectValue placeholder={filter} />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  {years.map((year, index) => (
+                    <SelectItem
+                    key={index}
+                    value={year}
+                    >
+                      {year}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        <Map filter={filter} />
+      </div>
       <div className="flex flex-col md:flex-row gap-16 items-center w-10/12 mx-auto bg-[url('/images/overlay.png')">
         <Image
           src={"/images/nasa-i9w4Uy1pU-s-unsplash.jpg"}
