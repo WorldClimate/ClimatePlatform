@@ -11,11 +11,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { useRouter } from "next/navigation";
 
 export default function DarkModeButton() {
   const { setTheme, theme } = useTheme();
-  const router = useRouter();
 
   return (
     <DropdownMenu>
@@ -31,10 +29,7 @@ export default function DarkModeButton() {
           className={`${
             theme === "light" && "bg-zinc-300 text-accent-foreground"
           }`}
-          onClick={() => {
-            router.refresh();
-            setTheme("light");
-          }}
+          onClick={() => setTheme("light")}
         >
           Light
         </DropdownMenuItem>
@@ -42,10 +37,7 @@ export default function DarkModeButton() {
           className={`${
             theme === "dark" && "bg-zinc-700 text-accent-foreground"
           }`}
-          onClick={() => {
-            router.refresh();
-            setTheme("dark");
-          }}
+          onClick={() => setTheme("dark")}
         >
           Dark
         </DropdownMenuItem>
@@ -53,10 +45,7 @@ export default function DarkModeButton() {
           className={`${
             theme === "system" && "bg-muted text-accent-foreground"
           }`}
-          onClick={() => {
-            router.refresh();
-            setTheme("system");
-          }}
+          onClick={() => setTheme("system")}
         >
           System
         </DropdownMenuItem>

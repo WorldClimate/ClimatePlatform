@@ -110,7 +110,8 @@ export default function Map({filter}: Props) {
           <text
             textAnchor="middle"
             y={markerOffset}
-            style={{ fontFamily: "system-ui", fill: "#36454F", fontSize: "12px" }}
+            style={{ fontFamily: "system-ui", fontSize: "12px" }}
+            className="fill-[#36454F] dark:fill-foreground"
           >
             {name}
           </text>

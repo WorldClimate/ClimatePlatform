@@ -4,14 +4,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { WavyBackground } from "@/components/ui/wavy-background";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Map from "@/components/Map";
 import Link from "next/link";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 import { Label } from "@/components/ui/label";
 import {
@@ -32,7 +28,6 @@ const World = dynamic(
 );
 
 export default function Page() {
-  const { theme } = useTheme();
   const [filter, setFilter] = useState("2017");
   const router = useRouter();
 
@@ -450,7 +445,7 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <WavyBackground
-        backgroundFill={theme === "dark" ? "black" : "#ffffff"}
+        backgroundFill={"#ffffff"}
         className="w-screen mx-auto overflow-hidden"
         onClick={() => router.push("/main/home")}
       >
@@ -468,7 +463,7 @@ export default function Page() {
               transition={{
                 duration: 1,
               }}
-              className="w-full md:w-[600px]"
+              className="w-full md:w-[600px] text-black"
             >
               <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-center">
                 The World Climate

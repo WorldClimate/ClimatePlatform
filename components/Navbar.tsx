@@ -46,7 +46,7 @@ const locations: { title: string; href: string; description: string }[] = [
 export function Navbar() {
   const pathName = usePathname();
   return (
-    <div className="w-full hidden md:flex h-16 bg-[url('/images/overlay.png')]">
+    <div className="w-full sticky top-0 z-10 hidden md:flex h-16 bg-[url('/images/overlay.png')] bg-background">
       <Image
         src={"/images/logo-transparent.png"}
         alt="logo"
