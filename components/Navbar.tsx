@@ -15,31 +15,29 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import DarkModeButton from "./DarkModeButton";
 
-const locations: { title: string; href: string; description: string }[] = [
+const locations: { title: string; href: string; }[] = [
   {
     title: "OXFORD",
-    href: "/location/oxford",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    href: "/location/oxford"
   },
   {
     title: "MUMBAI",
-    href: "/location/mumbai",
-    description:
-      "For sighted users to preview content available behind a link.",
+    href: "/location/mumbai"
+
   },
   {
     title: "NEW YORK",
-    href: "/location/new-york",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    href: "/location/new-york"
+
   },
   {
     title: "SAN FRANCISCO",
-    href: "/location/san-francisco",
-    description: "Visually or semantically separates content.",
+    href: "/location/san-francisco"
+  },
+  {
+    title: "JAKARTA",
+    href: "/location/jakarta"
   },
 ];
 
@@ -52,7 +50,7 @@ export function Navbar() {
         alt="logo"
         width={1024}
         height={1024}
-        className="w-16 h-16 relative top-4 left-2 dark:invert"
+        className="w-32 h-32 top-4 left-2"
       />
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="gap-5">
@@ -102,14 +100,12 @@ export function Navbar() {
                     title={location.title}
                     href={location.href}
                   >
-                    {location.description}
                   </ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <DarkModeButton />
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

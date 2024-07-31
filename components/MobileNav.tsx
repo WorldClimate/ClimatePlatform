@@ -9,7 +9,6 @@ import {
 } from "./ui/sheet";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
-import DarkModeButton from "./DarkModeButton";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const MobileNav = () => {
@@ -20,7 +19,6 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent>
         <SheetTitle className="flex flex-col mt-5 px-3">
-          <DarkModeButton />
         </SheetTitle>
         <Separator className="my-3" />
         <SheetDescription className="flex">
