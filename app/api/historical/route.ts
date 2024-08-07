@@ -49,7 +49,7 @@ export async function GET(req: NextRequest) {
   console.log(req.nextUrl.searchParams.get("location"))
   const location = req.nextUrl.searchParams.get("location")
   const field = req.nextUrl.searchParams.get("field")
-  const csvFilePath = path.resolve('data/'+location+'/combined_tempmax.json');
+  const csvFilePath = path.resolve('data/'+location+'/combined_'+field+'.json');
   
   const headers = [
     'datetime',
