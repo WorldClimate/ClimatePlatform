@@ -50,12 +50,6 @@ export async function GET(req: NextRequest) {
   const location = req.nextUrl.searchParams.get("location")
   const field = req.nextUrl.searchParams.get("field")
   const csvFilePath = path.resolve('data/'+location+'/combined_'+field+'.json');
-  
-  const headers = [
-    'datetime',
-    'tempmax',
-  ];
-  
   const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
   const jsonresponse = JSON.parse(fileContent);
 // or just use new Response ❗️
