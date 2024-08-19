@@ -33,7 +33,7 @@ export default function Map() {
         rotate: [-10, 0, 0],
         scale: 147,
       }}
-      className="relative sm:-top-55 md:-top-60 lg:-top-60"
+      className="relative sm:-top-55 md:-top-30 lg:-top-40"
     >
       <Sphere
         id="Sphere"

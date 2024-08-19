@@ -9,15 +9,14 @@ export default function Page() {
   const { theme } = useTheme();
   const router = useRouter();
   return (
-    <div className="min-h-screen">
-				<section id="banner">
+				<section id="main">
+        <section id="banner">
 					<div className="content">
 						<h2>Welcome to The World Climate.com</h2>
 						<p>A site where we&apos;re looking to improve our worlds outlook by providing resources and tooling for everyone to examine the future of climate in their own backyard</p>
 					</div>
 				</section>
         <Map />
-				<section id="main">
 					<div className="container">
 						<div className="row gtr-200">
 							<div className="col-12">
@@ -85,6 +84,5 @@ export default function Page() {
 						</div>
 					</div>
 				</section>
-    </div>
   );
 }

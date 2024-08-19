@@ -16,6 +16,7 @@ export default function LocationPage() {
   const location = useParams().slug.toString()
       return (
       <QueryClientProvider client={queryClient}>
+      <section id="main">
       <div className="container mx-auto px-10">
         <Overview location={location}/>
         <div className="grid grid-cols-3 py-20">
@@ -84,6 +85,7 @@ export default function LocationPage() {
           } location={location} field="num_days_above_100" />
         </div>
 </div>
+</section>
 </QueryClientProvider>
     );
 }
