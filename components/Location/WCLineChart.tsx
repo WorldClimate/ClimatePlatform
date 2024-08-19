@@ -4,6 +4,7 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts';
 import { useQuery } from '@tanstack/react-query'
 import { SpinningCircles } from 'react-loading-icons'
+import { createTrend } from 'trendline';
 
 interface Props {
     chartInfo: {
@@ -43,7 +44,7 @@ export default function Chart({chartInfo, location, field}: Props) {
                     <CartesianGrid stroke="#f5f5f5" />
                     <Line name={chartInfo.lineOneName} type="monotone" dataKey={chartInfo.lineOneDataKey} stroke="#ff7300" yAxisId={0} dot={false}/>
                     <Line name={chartInfo.lineTwoName} opacity={0.25} type="monotone" dataKey={chartInfo.lineTwoDataKey} stroke="#7bb08a" yAxisId={0} dot={false}/>
-                    <ReferenceLine x={2024} label="Start of Projection" />
+                    <ReferenceLine x={2024} label="2024" />
                     </LineChart>
             );
 }
