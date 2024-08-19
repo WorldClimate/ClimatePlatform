@@ -20,10 +20,11 @@ interface Props {
 
 export default function WCBarChart({chartInfo, location, field}: Props) {
     const chartWidth = 450;
+    // const hostname =
     const { isPending, error, data } = useQuery({
         queryKey: [field],
         queryFn: () =>
-          fetch(`http://localhost:3000/api/historical?location=${location}&field=${field}`).then((res) =>
+          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
             res.json(),
           ),
       })

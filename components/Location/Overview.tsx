@@ -11,7 +11,7 @@ export default function Overview({ location }: Props){
     const {isPending, error, data} = useQuery({
         queryKey: ['overview'],
         queryFn: () =>
-          fetch(`http://localhost:3000/api/historical?location=${location}&field=overview`).then((res) =>
+          fetch(`/api/historical?location=${location}&field=overview`).then((res) =>
             res.json(),
           ),
     })

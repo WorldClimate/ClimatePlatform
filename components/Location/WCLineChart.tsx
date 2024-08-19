@@ -26,7 +26,7 @@ export default function Chart({chartInfo, location, field}: Props) {
     const { isPending, error, data } = useQuery({
         queryKey: [field],
         queryFn: () =>
-          fetch(`http://localhost:3000/api/historical?location=${location}&field=${field}`).then((res) =>
+          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
             res.json(),
           ),
       })
