@@ -1485,9 +1485,9 @@ ul.divided {
   padding-left: 0;
 }
 ul.divided > li {
-  border-top: solid 2px #e7eae8;
-  padding-top: 2.35em;
-  margin-top: 2.35em;
+  /* border-top: solid 2px #e7eae8; */
+  padding-top: 0.35em;
+  margin-top: 0.35em;
   padding-left: 0;
 }
 ul.divided > li:first-child {
