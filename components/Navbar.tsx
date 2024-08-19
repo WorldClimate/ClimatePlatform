@@ -46,7 +46,7 @@ export function Navbar() {
   return (
     <div className="w-full hidden md:flex h-16 bg-[url('/images/overlay.png')]">
       <Image
-        src={"/images/logo-transparent.png"}
+        src={"/images/logo-transparent copy.png"}
         alt="logo"
         width={1024}
         height={1024}

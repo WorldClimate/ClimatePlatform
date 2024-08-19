@@ -1,11 +1,12 @@
+
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
+import "./main.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
 import Script from "next/script";
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -67,18 +68,18 @@ export default function RootLayout({
       <head>
       <Script src="https://kit.fontawesome.com/1dce5cdcc1.js"/>
       </head>
-      <body className={poppins.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar/>
-          <MobileNav/>
-          {children}
-        </ThemeProvider>
-      </body>
+        <body className={poppins.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar/>
+            <MobileNav/>
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   );
 }
