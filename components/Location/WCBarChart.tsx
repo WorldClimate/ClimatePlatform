@@ -36,7 +36,6 @@ export default function WCBarChart({chartInfo, location, field}: Props) {
                 <tspan fontFamily="Open Sans" fontSize="18">{chartInfo.title}</tspan>
             </text>
             <Tooltip position={{x:50,y:-100}} viewBox={{ x: 0, y: 0, width: 500, height: 20 }}/>
-            <Legend />
             <Bar dataKey={chartInfo.barDataKey} fill="#7bb08a" activeBar={<Rectangle fill="pink" stroke="blue" />} />
           </BarChart>)
         }

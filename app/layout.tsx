@@ -6,6 +6,7 @@ import "./main.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
+import Footer from "@/components/Footer";
 import Script from "next/script";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -65,21 +66,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-      <Script src="https://kit.fontawesome.com/1dce5cdcc1.js"/>
-      </head>
-        <body className={poppins.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar/>
-            <MobileNav/>
-            {children}
-          </ThemeProvider>
-        </body>
+        <head>
+        <Script src="https://kit.fontawesome.com/4c9efe62f8.js"/>
+        </head>
+          <body className={poppins.className}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Navbar/>
+              <MobileNav/>
+              {children}
+              <Footer/>
+            </ThemeProvider>
+          </body>
     </html>
   );
 }

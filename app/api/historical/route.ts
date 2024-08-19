@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
   }
   const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
   const jsonresponse = JSON.parse(fileContent);
-// or just use new Response ❗️
+  
 return NextResponse.json(jsonresponse, { status: 200, statusText: "OK" });
 
   

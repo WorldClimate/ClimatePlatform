@@ -12,16 +12,6 @@ import Overview from '@/components/Location/Overview';
 
 const queryClient = new QueryClient()
 
-
-type OverviewData = {
-  city:string, 
-  locationInformation:{ 
-    population:string, 
-    altitude:string, 
-    description:string, 
-    industries:string[]}
-}
-
 export default function LocationPage() {
   const location = useParams().slug.toString()
       return (

@@ -17,14 +17,16 @@ export default function Overview({ location }: Props){
     })
     if (isPending) return <SpinningCircles/>
     if (error) return 'An error has occurred: ' + error.message
+
     const risks = data.risksAndMitigations.risks.map((risk:any) =>
-    <li className="px-4 py-2 bg-white border-b last:border-none border-black-200">{risk.date} - {risk.name} - {risk.description}</li>);
+    <li key={risk.name} className="px-4 py-2 bg-white border-b last:border-none border-black-200"><b>{risk.date} - {risk.name}</b> - {risk.description}</li>);
     const mitigations = data.risksAndMitigations.mitigations.map((mitigation:any) =>
-        <li className="px-4 py-2 bg-white border-b last:border-none border-black-200"><a href={mitigation.url}>{mitigation.name}</a> - {mitigation.description}</li>);
+    <li  key={mitigation.name}className="px-4 py-2 bg-white border-b last:border-none border-black-200"><b><a href={mitigation.url}>{mitigation.name}</a></b> - {mitigation.description}</li>);
         
-    return (<div>
+    return (
+    <div>
         <div>
-          <section className="box features py-20">
+          <section className="box features py-10">
             <h2 className="major"><span>{location.replace('-', ' ')}</span></h2>
           </section>
         </div>
@@ -33,21 +35,21 @@ export default function Overview({ location }: Props){
                 <img src={`/images/locations/${location}/overview.jpg`}/>
             </div>
             <div>
-                <h4>Description</h4>
-                <p>{data.locationInformation.description}</p><br/>
                 <h4>Key Geopolitical Facts</h4>
-                <p>
-                    <b>Population</b> - {data.locationInformation.population}<br/>
-                    <b>Altitude</b> - {data.locationInformation.altitude} meters<br/> 
-                    <b>Industries</b> - {data.locationInformation.industries.map((industry: any) => industry).join(", ")}
-                </p>
-            </div>
-
-            <div className="col-span-2">
+                    <p>
+                        <b>Population</b> - {data.locationInformation.population}<br/>
+                        <b>Altitude</b> - {data.locationInformation.altitude} meters<br/> 
+                        <b>Industries</b> - {data.locationInformation.industries.map((industry: any) => industry).join(", ")}
+                    </p>
+                    <br/>
                 <h4>Weather</h4>
                 <p>{data.locationInformation.weather}</p>
             </div>
-            <div className="col-span-2">
+            <div>
+                <h4>Description</h4>
+                <p>{data.locationInformation.description}</p><br/>
+            </div>
+            <div>
                 <h4>History</h4>
                 <p>{data.locationInformation.history}</p>
             </div>

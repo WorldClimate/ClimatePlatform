@@ -27,6 +27,11 @@ const locations: { title: string; href: string; }[] = [
 
   },
   {
+    title: "LAGOS",
+    href: "/location/lagos"
+
+  },
+  {
     title: "NEW YORK",
     href: "/location/new-york"
 
@@ -48,8 +53,8 @@ export function Navbar() {
       <Image
         src={"/images/logo-transparent copy.png"}
         alt="logo"
-        width={1024}
-        height={1024}
+        width={512}
+        height={512}
         className="w-32 h-32 top-4 left-2"
       />
       <NavigationMenu className="mx-auto">
@@ -57,7 +62,7 @@ export function Navbar() {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                className={`font-semibold h-[45px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
                   pathName === "/main/home"
                     ? "bg-primary hover:bg-primary"
                     : "bg-transparent hover:bg-[#C1CAC5]"
@@ -70,7 +75,7 @@ export function Navbar() {
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                className={`font-semibold h-[45px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
                   pathName === "/main/about"
                     ? "bg-primary hover:bg-primary"
                     : "bg-transparent hover:bg-[#C1CAC5]"
@@ -82,7 +87,7 @@ export function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger
-              className={`font-semibold h-[96px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+              className={`font-semibold h-[45px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
                 pathName.includes("/main/locations")
                   ? "bg-primary hover:bg-primary"
                   : "bg-transparent hover:bg-[#C1CAC5]"

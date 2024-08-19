@@ -191,7 +191,7 @@ p, ul, ol, dl, table {
 
 /* Section/Article */
 section, article {
-  margin-bottom: 6em;
+  margin-bottom: 1em;
 }
 section > :last-child, section:last-child, article > :last-child, article:last-child {
   margin-bottom: 0;
@@ -1864,11 +1864,6 @@ table.default thead {
   color: #C1CAC5;
 }
 
-/* Nav */
-body {
-  padding-top: 3.25em;
-}
-
 #nav {
   position: fixed;
   top: 0;
@@ -2386,10 +2381,7 @@ body {
   h2.major span {
     padding: 0 1em;
   }
-  /* Section/Article */
-  section, article {
-    margin-bottom: 2em;
-  }
+
   /* Button */
   input[type=button],
   input[type=submit],

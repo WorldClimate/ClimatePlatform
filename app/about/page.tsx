@@ -12,7 +12,7 @@ export default function page() {
 									<section className="box highlight">
 										<header>
 											<h2>Our mission</h2>
-											<p>To illuminate the climate risks facing each individual's immediate surroundings.</p>
+											<p>To illuminate the climate risks facing each individuals immediate surroundings.</p>
 										</header>
 										<p>
 											We deliver factual, objective information in easily digestible formats, facilitating comprehension and awareness.
