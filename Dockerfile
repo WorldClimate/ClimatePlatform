@@ -1,23 +1,22 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+# Use an official Node runtime as a parent image
+FROM node:20.16.0-alpine
+
+# Set the working directory to /
 WORKDIR /app
-EXPOSE 80
 
-ENV ASPNETCORE_URLS=http://*:8080
+# Copy the package.json and package-lock.json to the working directory
+COPY ./package*.json ./
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+# Install the dependencies
+RUN npm install
 
-COPY ["ClimatePlatform.csproj", "."]
-
-RUN dotnet restore "./ClimatePlatform.csproj"
+# Copy the remaining application files to the working directory
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "ClimatePlatform.csproj" -c Release -o /app/build
 
-FROM build AS publish
-RUN dotnet publish "ClimatePlatform.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN npm run build
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ClimatePlatform.dll"]
+# Expose port 3000 for the application
+EXPOSE 3000
+
+# Start the application
+CMD [ "npm", "run", "start" ]
