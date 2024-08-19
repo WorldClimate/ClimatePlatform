@@ -21,7 +21,7 @@ export default function LocationPage() {
         <Overview location={location}/>
         <div className="grid grid-cols-3 py-20">
           <WCLineChart chartInfo={{
-              title:'Avg Yearly Max Temperature',
+              title:'Yearly Max Temperature (C)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'tempmax',
@@ -32,7 +32,7 @@ export default function LocationPage() {
               lineTwoDataKey:'tempmax'
             }} location={location} field="tempmax" />
           <WCLineChart chartInfo={{
-              title:'Avg Yearly Minimum Temperature',
+              title:'Yearly Minimum Temperature (C)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'tempmin',
@@ -43,7 +43,7 @@ export default function LocationPage() {
               lineTwoDataKey:'tempmin'
             }} location={location} field="tempmin" />
           <WCLineChart chartInfo={{
-              title:'Cumulative Annual Precip',
+              title:'Cumulative Annual Precip (mm)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'precip',
@@ -55,31 +55,31 @@ export default function LocationPage() {
             }} location={location} field="precip" />
           <WCBarChart chartInfo={
             {
-              title:'Number of Days Above 80f',
+              title:'# Days Above 80F (26.7C)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'num_days_above_80',
-              yAxisLabel:'# Days Above 80f',
+              yAxisLabel:'# Days Above 80F',
               barDataKey:'num_days_above_80'
             }
           } location={location} field="num_days_above_80" />
           <WCBarChart chartInfo={
             {
-              title:'Number of Days Above 90f',
+              title:'# Days Above 90F (32.2C)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'num_days_above_90',
-              yAxisLabel:'# Days Above 90f',
+              yAxisLabel:'# Days Above 90F',
               barDataKey:'num_days_above_90'
             }
           } location={location} field="num_days_above_90" />
           <WCBarChart chartInfo={
             {
-              title:'Number of Days Above 100f',
+              title:'# Days Above 100F (37.8C)',
               xAxisKey:'year',
               xAxisLabel:'Year',
               yAxisKey:'num_days_above_100',
-              yAxisLabel:'# Days Above 100f',
+              yAxisLabel:'# Days Above 100F',
               barDataKey:'num_days_above_100'
             }
           } location={location} field="num_days_above_100" />
