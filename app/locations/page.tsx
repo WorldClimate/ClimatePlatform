@@ -13,9 +13,9 @@ export default function LocationsPage() {
 												<li><h3><a href="/location/Jakarta">Jakarta</a></h3></li>
 												<li><h3><a href="/location/Lagos">Lagos</a></h3></li>
 												<li><h3><a href="/location/Mumbai">Mumbai</a></h3></li>
-												<li><h3><a href="/location/Newyork">New York</a></h3></li>
+												<li><h3><a href="/location/New-York">New York</a></h3></li>
 												<li><h3><a href="/location/Oxford">Oxford</a></h3></li>
-												<li><h3><a href="/location/Sanfrancisco">San Francisco</a></h3></li>
+												<li><h3><a href="/location/San-Francisco">San Francisco</a></h3></li>
 											</ul>
 										</header>
 									</section>
