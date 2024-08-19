@@ -16,7 +16,7 @@ const geoUrl = "/features.json";
 
 const colorScale = scaleLinear()
   .domain([0.29, 0.68])
-  .range(["#16A34A", "#FF6405"]);
+  .range(["#78c46e", "#c4996e"]);
 
 export default function Map() {
   const [data, setData] = useState([]);
@@ -33,7 +33,7 @@ export default function Map() {
         rotate: [-10, 0, 0],
         scale: 147,
       }}
-      className="relative -top-[68px] sm:-top-24 md:-top-32 lg:-top-44"
+      className="relative sm:-top-55 md:-top-60 lg:-top-60"
     >
       <Sphere
         id="Sphere"

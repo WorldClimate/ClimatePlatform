@@ -37,13 +37,20 @@ export default function Page() {
 											run a climate risk assessment to understand the potential risks and opportunities.
 										</p>
 									</section>
-
 							</div>
 							<div className="col-12">
 									<section className="box features">
 										<h2 className="major"><span>Generate Reports</span></h2>
 										<div>
 											<div className="row">
+                      <div className="col-3 col-6-medium col-12-small">
+														<section className="box feature">
+															<h3><a href="#">Business Case Analysis</a></h3>
+															<p>
+																Analyze the Climate Risk of your business case to understand the potential risks and opportunities.
+															</p>
+														</section>
+												</div>
 												<div className="col-3 col-6-medium col-12-small">
 														<section className="box feature">
 															<h3><a href="#">Physical Risk</a></h3>
@@ -71,20 +78,6 @@ export default function Page() {
 														</section>
 
 												</div>
-												<div className="col-3 col-6-medium col-12-small">
-														<section className="box feature">
-															<h3><a href="#">Some other thing here</a></h3>
-															<p>
-																Add something here to make this feature even more compelling.
-															</p>
-														</section>
-												</div>
-												<div className="col-12">
-													<ul className="actions">
-														<li><a href="#" className="button large">Do Something</a></li>
-														<li><a href="#" className="button alt large">Think About It</a></li>
-													</ul>
-												</div>
 											</div>
 										</div>
 									</section>
@@ -92,21 +85,6 @@ export default function Page() {
 						</div>
 					</div>
 				</section>
-      <div className="flex flex-col md:flex-row gap-16 items-center w-10/12 mx-auto bg-[url('/images/overlay.png')">
-        <div className="w-full">
-          <h2 className="uppercase font-semibold text-4xl mb-3 md:mb-5">
-            Welcome to the World Climate.com
-          </h2>
-          <p className="flex gap-5">
-            <i className="mt-5 text-primary fa-solid fa-earth-americas fa-xl md:fa-2xl"></i>
-            <span className="text-muted-foreground">
-              A SITE WHERE WE&apos;RE LOOKING TO IMPROVE OUR WORLDS OUTLOOK BY
-              PROVIDING RESOURCES AND TOOLING FOR EVERYONE TO EXAMINE THE FUTURE
-              OF CLIMATE IN THEIR OWN BACKYARD
-            </span>
-          </p>
-        </div>
-      </div>
     </div>
   );
 }

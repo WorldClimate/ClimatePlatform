@@ -55,7 +55,7 @@ export function Navbar() {
         alt="logo"
         width={512}
         height={512}
-        className="w-32 h-32 top-4 left-2"
+        className="w-16 h-16 top-4 left-2"
       />
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="gap-5">
