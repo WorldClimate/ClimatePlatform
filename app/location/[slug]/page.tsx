@@ -19,7 +19,7 @@ export default function LocationPage() {
       <section id="main">
       <div className="container mx-auto px-10">
         <Overview location={location}/>
-        <div className="grid grid-cols-3 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20">
           <WCLineChart chartInfo={{
               title:'Yearly Max Temperature (C)',
               xAxisKey:'year',
