@@ -2489,4 +2489,11 @@ table.default thead {
   margin-bottom: 20px;
 }
 
+.charting-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width:450px
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, ResponsiveContainer } from 'recharts';
 import { useQuery } from '@tanstack/react-query'
 import { SpinningCircles } from 'react-loading-icons'
 import { createTrend } from 'trendline';
@@ -34,7 +34,8 @@ export default function Chart({chartInfo, location, field}: Props) {
       if (isPending) return <SpinningCircles/>
         if (error) return 'An error has occurred: ' + error.message
             return (
-                <LineChart width={chartWidth} height={300} data={data.data} margin={{ top: 50, right: 20, left: 10, bottom: 50 }}>
+                <ResponsiveContainer width={chartWidth} height="80%">
+                    <LineChart data={data.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
                     <text x={chartWidth / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
                         <tspan fontFamily="Open Sans" fontSize="18">{chartInfo.title}</tspan>
                     </text>
@@ -46,5 +47,6 @@ export default function Chart({chartInfo, location, field}: Props) {
                     <Line name={chartInfo.lineTwoName} opacity={0.25} type="monotone" dataKey={chartInfo.lineTwoDataKey} stroke="#7bb08a" yAxisId={0} dot={false}/>
                     <ReferenceLine x={2024} label="2024" />
                     </LineChart>
+                </ResponsiveContainer>
             );
 }
