@@ -2490,10 +2490,37 @@ table.default thead {
 }
 
 .charting-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
-  width:450px
+  height: 300px;
+  width:450px;
 }
+
+.charting-overview{
+  width: 450px;
+  height: 900px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom:50px;
+}
+.analysis{
+  width: 450px;
+  align-items: center;
+  padding-left:50px;
+}
+
+.risks{
+  padding-top:20px;
+  align-items: center;
+  width: 450px;
+}
+
+.suggestions{
+  padding-top:20px;
+  align-items: center;
+  width: 450px;
+
+}
+
+li {list-style-type: circle;}
 /*# sourceMappingURL=main.css.map */

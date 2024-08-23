@@ -11,7 +11,10 @@ export async function GET(req: NextRequest) {
   if(field==='overview'){
     JSONFilePath = path.resolve('data/'+location+'/'+field+'.json');
   }
-  else { 
+  else if (field?.includes('genai_analysis')){
+    JSONFilePath = path.resolve('data/'+location+'/'+field+'.json');
+  }
+  else{ 
     JSONFilePath = path.resolve('data/'+location+'/combined_'+field+'.json');
   }
   const fileContent = fs.readFileSync(JSONFilePath, { encoding: 'utf-8' });
