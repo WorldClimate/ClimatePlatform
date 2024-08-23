@@ -2501,7 +2501,7 @@ table.default thead {
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding-bottom:50px;
+  margin-top:50px;
 }
 .analysis{
   width: 450px;
