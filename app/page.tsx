@@ -13,7 +13,7 @@ export default function Page() {
         <section id="banner">
 					<div className="content">
 						<h2>Welcome to The World Climate.com</h2>
-						<p>A site where we&apos;re looking to improve our worlds outlook by providing resources and tooling for everyone to examine the future of climate in their own backyard</p>
+						<p>A demonstration site to highlight our technical capabilities and potential business opportunities to help reverse climate change.</p>
 					</div>
 				</section>
         <Map />

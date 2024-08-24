@@ -35,7 +35,7 @@ export default function ChartAnalysis({ location,  query_type}: Props){
             <ul className="suggestions-list">
                 {results.suggestions.map(function(suggestion: string, index: number){
                     if(index<3)
-                    return <li key={index}>{suggestion}</li>;
+                    return <li className="suggestion" key={index}>{suggestion}</li>;
                 })}
             </ul>
         </div>
