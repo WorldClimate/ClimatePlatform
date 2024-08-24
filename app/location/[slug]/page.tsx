@@ -29,7 +29,7 @@ export default function LocationPage() {
           <div className="charting-overview">
             <div className="charting-block">
               <WCLineChart chartInfo={{
-                  title:'Yearly Max Temperature (C)',
+                  title:'Max Yearly Temperature (C)',
                   xAxisKey:'year',
                   xAxisLabel:'Year',
                   yAxisKey:'tempmax',
@@ -45,7 +45,7 @@ export default function LocationPage() {
           <div className="charting-overview">
             <div className="charting-block">
               <WCLineChart chartInfo={{
-                  title:'Yearly Minimum Temperature (C)',
+                  title:'Minimum Yearly Temperature (C)',
                   xAxisKey:'year',
                   xAxisLabel:'Year',
                   yAxisKey:'tempmin',
@@ -61,7 +61,7 @@ export default function LocationPage() {
           <div className="charting-overview">
             <div className="charting-block">
                 <WCLineChart chartInfo={{
-                    title:'Cumulative Annual Precip (mm)',
+                    title:'Cumulative Yearly Precip (mm)',
                     xAxisKey:'year',
                     xAxisLabel:'Year',
                     yAxisKey:'precip',
