@@ -2496,7 +2496,7 @@ table.default thead {
 
 .charting-overview{
   width: 450px;
-  height: 900px;
+  height: auto;
   display: flex;
   flex: 1;
   flex-direction: column;
