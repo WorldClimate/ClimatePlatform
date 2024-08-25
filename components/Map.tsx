@@ -11,6 +11,7 @@ import {
   Graticule,
 } from "react-simple-maps";
 import * as Tooltip from "@radix-ui/react-tooltip";
+import { styleText } from "util";
 
 const geoUrl = "/features.json";
 
@@ -54,6 +55,17 @@ export default function Map() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
+                    style={{
+                      default: {
+                          outline: 'none'
+                      },
+                      hover: {
+                          outline: 'none'
+                      },
+                      pressed: {
+                          outline: 'none'
+                      }
+                    }}
                     className="hover:fill-[#13cb56] my-anchor-element"
                     fill={d ? colorScale(d["2017"]).toString() : "#F5F4F6"}
                   />
