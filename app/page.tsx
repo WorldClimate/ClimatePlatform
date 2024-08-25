@@ -4,19 +4,40 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import Map from "@/components/Map";
-
+import ReactSlider from "react-slider"
 export default function Page() {
   const { theme } = useTheme();
   const router = useRouter();
+  const startingYear = 1980;
+  const [currentYear,setCurrentYear] = useState(startingYear);
+  const changeYear = (value: number) => {
+	setCurrentYear(startingYear+value);
+  };
   return (
 				<section id="main">
-        <section id="banner">
+        			<section id="banner">
 					<div className="content">
 						<h2>Welcome to The World Climate.com</h2>
-						<p>A demonstration site to highlight our technical capabilities and potential business opportunities to help reverse climate change.</p>
+						<p>A demonstration site to highlight our technical capabilities and potential business opportunities around reversing climate change.</p>
+					</div>
+					<div className="slider-section">
+						<b>{currentYear}</b>
+						<ReactSlider
+							className="horizontal-slider"
+							thumbClassName="example-thumb"
+							trackClassName="example-track"
+							onBeforeChange={(value, index) =>
+								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
+							}
+							onChange={changeYear}
+							onAfterChange={(value, index) =>
+								console.log(`onAfterChange: ${JSON.stringify({ value, index })}`)
+							}
+							renderThumb={(props, state) => <div {...props}></div>}
+						/>
 					</div>
 				</section>
-        <Map />
+        <Map currentYear={currentYear}/>
 					<div className="container">
 						<div className="row gtr-200">
 							<div className="col-12">

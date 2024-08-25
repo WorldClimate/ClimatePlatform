@@ -1983,20 +1983,12 @@ table.default thead {
 /* Banner */
 #banner {
   position: relative;
-  background-image: url("../public/images/overlay.png"), url("../public/images/overlay.png"), url("../public/images/banner.jpg");
-  background-position: top left, top left, center center;
-  background-repeat: repeat, repeat, no-repeat;
-  background-size: auto, auto, cover;
   z-index: 1;
-  padding: 4em 0;
+  /* padding: 4em 0; */
 }
 #banner .content {
   position: relative;
   background-color: #b1ddab;
-  background-image: url("../public/images/overlay.png"), url("../public/images/highlight.png");
-  background-position: top left, center center;
-  background-size: auto, 100% 250%;
-  background-repeat: repeat, no-repeat;
   text-align: center;
   margin: 0;
   /* padding: 4em 0 3.5em 0; */
@@ -2015,26 +2007,6 @@ table.default thead {
   font-size: 1.35em;
   margin: 0 0 1.25em 0;
 }
-#banner .content .button {
-  -moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-  -webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-  -ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-  transition: border-color .2s ease-in-out, color .2s ease-in-out;
-  color: #b4b7b5;
-  background: transparent !important;
-  border: solid 4px #575d59;
-  border-color: rgba(87, 93, 89, 0.35);
-  font-size: 1.5em;
-}
-#banner .content .button:hover {
-  color: #e4e7e5;
-  border-color: rgba(87, 93, 89, 0.75);
-}
-#banner .content .button:active {
-  color: #fff;
-  border-color: rgb(97, 103, 99);
-}
-
 /* Main */
 #main {
   background: #fff;
@@ -2042,7 +2014,7 @@ table.default thead {
   /* border-bottom: solid 5px #c1cac5; */
   border-top-width: 35px;
   border-bottom-width: 10px;
-  padding: 2em 0 2em 0;
+  /* padding: 2em 0 2em 0; */
 }
 
 /* Sidebar + Content */
@@ -2126,12 +2098,6 @@ table.default thead {
     font-size: 1.5em;
   }
   /* Banner */
-  #banner {
-    padding: 6em 0;
-  }
-  #banner .content {
-    padding: 4em 0 3em 0;
-  }
   #banner .content h2 {
     margin: 0 0 0.65em 0;
   }
@@ -2167,9 +2133,9 @@ table.default thead {
     display: none;
   }
   /* Banner */
-  #banner {
+  /* #banner {
     padding: calc(14em + 44px) 0 14em 0;
-  }
+  } */
   /* Nav */
   #nav {
     display: none;
@@ -2435,13 +2401,13 @@ table.default thead {
   .box.page-content header > p {
     font-size: 1.25em;
   }
-  /* Banner */
+  Banner
   #banner {
     padding: calc(6em + 44px) 0 6em 0;
   }
-  #banner .content {
+  /* #banner .content {
     padding: 4em 2.5em 3em 2.5em;
-  }
+  } */
   #banner .content h2 {
     font-size: 2em;
   }
@@ -2521,4 +2487,44 @@ table.default thead {
   width: 450px;
 
 }
+
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 20px;
+  border: 1px solid grey;
+  align-items: center;
+}
+
+.example-thumb {
+  height:20px;
+  text-align: center;
+  background-color: #b1ddab;
+  color: white;
+  cursor: pointer;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.example-track.example-track-1 {
+  background: #f00;
+}
+
+.example-track.example-track-2 {
+  background: #0f0;
+}
+
+/* Slider */
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.horizontal-slider .example-thumb {
+  width: 50px;
+  height: 20px;
+  line-height: 38px;
+}
+
 /*# sourceMappingURL=main.css.map */
