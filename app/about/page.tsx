@@ -24,6 +24,8 @@ export default function page() {
 									<section className="box features">
 										<h2 className="major"><span>Our Team</span></h2>
                                             <p>We are a dedicated team of experts who are passionate about climate science and technology. Our team members have diverse backgrounds and bring a wealth of knowledge and experience to our platform. Together, we are committed to providing accurate and reliable information to help individuals make informed decisions.</p>
+											<br/>
+											<br/>
 										<div>
 											<div className="row">
 												<div className="col-3 col-6-medium col-12-small">
