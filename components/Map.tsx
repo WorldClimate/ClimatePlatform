@@ -27,7 +27,7 @@ export default function Map({currentYear}: {currentYear: number}) {
   }, []);
 
   return (
-    <div>
+    <div className="world-map">
       <ComposableMap
         projectionConfig={{
           rotate: [-10, 0, 0],

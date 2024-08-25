@@ -24,7 +24,7 @@ export default function Page() {
 						<b>{currentYear}</b>
 						<ReactSlider
 							className="horizontal-slider"
-							thumbClassName="example-thumb"
+							thumbClassName="slider-knob"
 							trackClassName="example-track"
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)

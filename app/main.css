@@ -2496,13 +2496,14 @@ table.default thead {
   align-items: center;
 }
 
-.example-thumb {
+.slider-knob {
   height:20px;
+  width:20px;
   text-align: center;
   background-color: #b1ddab;
-  color: white;
   cursor: pointer;
   border: 1px solid gray;
+  border-radius: 25%;
   box-sizing: border-box;
 }
 .example-track.example-track-1 {
