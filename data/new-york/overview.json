@@ -62,14 +62,18 @@
                 "url":"https://www1.nyc.gov/site/dep/environment/climate-resiliency.page"
             },
             {
-                "name":"Cloudburst Management"
+                "name":"Cloudburst Management",
+                "description":"The Cloudburst Management program in New York City aims to mitigate the impacts of heavy rainfall and prevent flooding in urban areas. Cloudbursts, which are intense and localized rainstorms, can overwhelm the city's drainage systems and lead to flash floods. The program focuses on implementing green infrastructure solutions, such as rain gardens, bioswales, and permeable pavements, to absorb and manage stormwater runoff. By enhancing the city's stormwater management infrastructure, the Cloudburst Management program helps protect communities, reduce property damage, and improve the overall resilience of New York City to extreme weather events.",
+                "url":"https://www1.nyc.gov/site/dep/environment/climate-resiliency.page"
             },
             {
                 "name":"PlaNYC: Getting Sustainability Done",
                 "description":"PlaNYC: Getting Sustainability Done is a comprehensive sustainability plan for New York City. It was launched in 2007 with the goal of making the city more sustainable and resilient to the challenges of climate change. The plan focuses on reducing greenhouse gas emissions, improving air quality, conserving water resources, enhancing green spaces, and promoting sustainable transportation and energy efficiency. PlaNYC includes a wide range of initiatives and policies to achieve these goals, such as expanding public transportation, retrofitting buildings for energy efficiency, and increasing the use of renewable energy sources. By implementing PlaNYC, New York City aims to create a greener, healthier, and more sustainable future for its residents."
             },
             {
-                "name":"The Financial District and Seaport Climate Resilience Master Plan"
+                "name":"The Financial District and Seaport Climate Resilience Master Plan",
+                "description":"The Financial District and Seaport Climate Resilience Master Plan is a comprehensive strategy to address the vulnerability of the Financial District and Seaport areas in New York City to the impacts of climate change. The plan includes measures such as flood protection, stormwater management, and infrastructure upgrades to enhance the resilience of these areas to sea-level rise, storm surges, and other climate-related hazards. By implementing the master plan, the city aims to protect critical infrastructure, businesses, and communities in the Financial District and Seaport from the increasing risks associated with climate change.",
+                "url":"https://www1.nyc.gov/site/sustainability/initiatives/financial-district-seaport.page"
             },
             {
                 "name":"NYC CoolRoofs",
@@ -77,7 +81,9 @@
                 "url":"https://www1.nyc.gov/site/sustainability/campaigns/coolroofs.page"
             },
             {
-                "name":"Community Engagement & Education"
+                "name":"Community Engagement & Education",
+                "description":"Community engagement and education are essential components of climate resilience and disaster preparedness in New York City. The city works with local communities, schools, businesses, and organizations to raise awareness about climate change, extreme weather events, and emergency response strategies. By providing information, resources, and training on climate resilience, the city empowers residents to take action to protect themselves, their families, and their neighborhoods during emergencies. Community engagement and education initiatives help build social cohesion, foster collaboration, and enhance the overall resilience of New York City to climate-related risks.",
+                "url":"https://www1.nyc.gov/site/sustainability/initiatives/community-engagement.page"
             }
         ]
     }
