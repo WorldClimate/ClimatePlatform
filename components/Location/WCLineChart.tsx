@@ -41,7 +41,7 @@ export default function Chart({chartInfo, location, field}: Props) {
                     </text>
                     <XAxis name={chartInfo.xAxisLabel} dataKey={chartInfo.xAxisKey} />
                     <YAxis name={chartInfo.yAxisLabel} dataKey={chartInfo.yAxisKey} />
-                    <Tooltip position={{x:50,y:-100}} viewBox={{ x: 0, y: 0, width: 500, height: 20 }}/>
+                    <Tooltip position={{x:50,y:-125}} viewBox={{ x: 0, y: 0, width: 500, height: 20 }}/>
                     <CartesianGrid stroke="#f5f5f5" />
                     <Line name={chartInfo.lineOneName} type="monotone" dataKey={chartInfo.lineOneDataKey} stroke="#ff7300" yAxisId={0} dot={false}/>
                     <Line name={chartInfo.lineTwoName} opacity={0.25} type="monotone" dataKey={chartInfo.lineTwoDataKey} stroke="#7bb08a" yAxisId={0} dot={false}/>
