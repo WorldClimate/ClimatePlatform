@@ -2485,7 +2485,11 @@ table.default thead {
   padding-top:20px;
   align-items: center;
   width: 450px;
+}
 
+.suggestions-list {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .horizontal-slider {
@@ -2505,13 +2509,6 @@ table.default thead {
   border: 1px solid gray;
   border-radius: 25%;
   box-sizing: border-box;
-}
-.example-track.example-track-1 {
-  background: #f00;
-}
-
-.example-track.example-track-2 {
-  background: #0f0;
 }
 
 /* Slider */

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import Map from "@/components/Map";
+import Map from "@/components/WorldMap";
 import ReactSlider from "react-slider"
 export default function Page() {
   const { theme } = useTheme();
@@ -18,7 +18,7 @@ export default function Page() {
         			<section id="banner">
 					<div className="content">
 						<h2>Welcome to The World Climate.com</h2>
-						<p>A demonstration site to highlight our technical capabilities and potential business opportunities around reversing climate change.</p>
+						<p>A demonstration site where we highlight Climate analysis capabilities and explore potential business opportunities around reversing climate change.</p>
 					</div>
 					<div className="slider-section">
 						<b>{currentYear}</b>
