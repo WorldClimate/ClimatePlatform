@@ -15,13 +15,13 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 const geoUrl = "/features.json";
 
 const colorScale = scaleLinear()
-  .domain([0.29, 0.68])
-  .range(["#78c46e", "#c4996e"]);
+  .domain([0.13296, 0.83875])
+  .range(["#b1ddab", "#FF5656"]);
 
 export default function Map({currentYear}: {currentYear: number}) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    csv(`/vulnerabilities.csv`).then((data) => {
+    csv(`/countries_minified.csv`).then((data) => {
       setData(data);
     });
   }, []);

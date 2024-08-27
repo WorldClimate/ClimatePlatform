@@ -8,9 +8,13 @@ import ReactSlider from "react-slider"
 export default function Page() {
   const { theme } = useTheme();
   const router = useRouter();
-  const startingYear = 1980;
+  const startingYear = 2024;
+  const endingYear = 2080;
   const [currentYear,setCurrentYear] = useState(startingYear);
   const changeYear = (value: number) => {
+	if(startingYear+value>=endingYear)
+		return;
+	console.log(value)
 	setCurrentYear(startingYear+value);
   };
   return (
@@ -26,6 +30,7 @@ export default function Page() {
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
 							trackClassName="example-track"
+							maximumValue={2080}
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
 							}
