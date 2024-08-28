@@ -76,6 +76,22 @@ export default function LocationPage() {
           </div>
           <div className="charting-overview">
             <div className="charting-block">
+                <WCLineChart chartInfo={{
+                    title:'Yearly Average Dew Point (C)',
+                    xAxisKey:'year',
+                    xAxisLabel:'Year',
+                    yAxisKey:'dew',
+                    yAxisLabel:'Yearly Average Dew Point (C)',
+                    lineOneName:'10 Year Rolling Avg',
+                    lineOneDataKey:'10_year_rolling_avg',
+                    lineTwoName:'Yearly Average Dew Point (C)',
+                    lineTwoDataKey:'dew'
+                  }} location={location} field="dew" />
+              </div>
+              <ChartAnalysis location={location} query_type="dew"/>
+          </div>
+          {/* <div className="charting-overview">
+            <div className="charting-block">
                 <WCBarChart chartInfo={
                   {
                     title:'# Days Above 80F (26.7C)',
@@ -88,7 +104,7 @@ export default function LocationPage() {
                 } location={location} field="num_days_above_80" />
               </div>
               <ChartAnalysis location={location} query_type="num_days_above_80"/>
-          </div>
+          </div> */}
           <div className="charting-overview">
             <div className="charting-block">
                 <WCBarChart chartInfo={
