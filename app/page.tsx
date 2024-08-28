@@ -14,7 +14,6 @@ export default function Page() {
   const changeYear = (value: number) => {
 	if(startingYear+value>=endingYear)
 		return;
-	console.log(value)
 	setCurrentYear(startingYear+value);
   };
   return (
@@ -25,12 +24,12 @@ export default function Page() {
 						<p>A demonstration site where we highlight Climate analysis capabilities and explore potential business opportunities around reversing climate change.</p>
 					</div>
 					<div className="slider-section">
-						<b>{currentYear}</b>
+						<b><h4>{currentYear} - Average Max Temperature</h4></b>
 						<ReactSlider
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
 							trackClassName="example-track"
-							maximumValue={2080}
+							Max={2080}
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
 							}
