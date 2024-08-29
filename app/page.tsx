@@ -12,8 +12,6 @@ export default function Page() {
   const endingYear = 2080;
   const [currentYear,setCurrentYear] = useState(startingYear);
   const changeYear = (value: number) => {
-	if(startingYear+value>=endingYear)
-		return;
 	setCurrentYear(startingYear+value);
   };
   return (
@@ -29,7 +27,8 @@ export default function Page() {
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
 							trackClassName="example-track"
-							Max={2080}
+							max={55}
+							min={0}
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
 							}
