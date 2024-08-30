@@ -25,14 +25,14 @@ export default function Overview({ location }: Props){
 
     const risks = data.risksAndMitigations.risks.map((risk:any) =>
     <li key={risk.name} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-        <Collapsible trigger={[risk.name, <BsChevronDown />]}>
+        <Collapsible key={risk.name}  trigger={risk.name}>
             <p>{risk.description}</p>
         </Collapsible>
     </li>);
     const mitigations = data.risksAndMitigations.mitigations.map((mitigation:any) =>
     <li key={mitigation.name}className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-        <Collapsible trigger={[mitigation.name, <BsChevronDown />]}>
-        <b><a href={mitigation.url}>Link</a></b>
+        <Collapsible key={mitigation.name} trigger={mitigation.name}>
+        <b><a target="_blank" rel="noopener noreferrer" href={mitigation.url}>Link</a></b>
         <p>{mitigation.description}</p>
         </Collapsible>
     </li>);
