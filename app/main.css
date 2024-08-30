@@ -2457,11 +2457,11 @@ table.default thead {
 
 .charting-block {
   height: 300px;
-  width:450px;
+  width: 600px;
 }
 
 .charting-overview{
-  width: 450px;
+  width: 600px;
   height: auto;
   display: flex;
   flex: 1;
@@ -2470,7 +2470,7 @@ table.default thead {
   margin-top:50px;
 }
 .analysis{
-  width: 450px;
+  width: 600px;
   align-items: center;
   padding-left:50px;
 }
@@ -2484,7 +2484,7 @@ table.default thead {
 .suggestions{
   padding-top:20px;
   align-items: center;
-  width: 450px;
+  width: 600px;
 }
 
 .suggestions-list {

@@ -23,7 +23,7 @@ interface Props {
 }
 
 export default function Chart({chartInfo, location, field}: Props) {
-    const chartWidth = 450;
+    const chartWidth = 600;
     const { isPending, error, data } = useQuery({
         queryKey: [field],
         queryFn: () =>
@@ -34,7 +34,7 @@ export default function Chart({chartInfo, location, field}: Props) {
       if (isPending) return <SpinningCircles/>
         if (error) return 'An error has occurred: ' + error.message
             return (
-                <ResponsiveContainer width={chartWidth} height="80%">
+                <ResponsiveContainer width={chartWidth} height="100%">
                     <LineChart data={data.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
                     <text x={chartWidth / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
                         <tspan fontFamily="Open Sans" fontSize="18">{chartInfo.title}</tspan>

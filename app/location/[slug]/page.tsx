@@ -25,7 +25,7 @@ export default function LocationPage() {
             <h2 className="major"><span>Climate Projections & Analysis</span></h2>
           </section>
         </div>
-        <div className="outer content-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20">
+        <div className="outer content-center grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-20">
           <div className="charting-overview">
             <div className="charting-block">
               <WCLineChart chartInfo={{

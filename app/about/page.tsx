@@ -12,10 +12,10 @@ export default function page() {
 									<section className="box highlight">
 										<header>
 											<h2>Our mission</h2>
-											<p>To illuminate the climate risks facing each individuals immediate surroundings.</p>
+											<p>To create a more resilient future where data is no longer a barrier but a powerful tool for everyone.</p>
 										</header>
 										<p>
-											We deliver factual, objective information in easily digestible formats, facilitating comprehension and awareness.
+										TheWorldClimate is a transformative platform that democratizes access to critical climate data by combining advanced analytics with generative AI to deliver actionable physical climate risk insights. As climate change intensifies, our platform empowers businesses, governments, and communities to navigate uncertainty with confidence. By making complex climate models accessible and understandable to all, TheWorldClimate enables proactive risk management and informed decision-making.
 										</p>
 									</section>
 
