@@ -21,7 +21,8 @@ export default function ChartAnalysis({ location,  query_type}: Props){
     if (error) return 'An error has occurred: ' + error.message
     const results = JSON.parse(data);
     console.log(results.risks);
-    return(<div className="analysis">
+    return(
+    <div className="analysis">
         <h4>Analysis</h4>
         <div>
             <p>{results.analysis}</p>
