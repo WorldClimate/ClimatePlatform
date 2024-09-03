@@ -243,6 +243,7 @@ header > p {
   flex-wrap: wrap;
   box-sizing: border-box;
   align-items: stretch;
+  justify-content: center;
 }
 .row > * {
   box-sizing: border-box;
@@ -2457,36 +2458,37 @@ table.default thead {
 
 .charting-block {
   height: 300px;
-  width: 600px;
+  width: auto;
 }
 
 .charting-overview{
-  width: 600px;
   height: auto;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   margin-top:50px;
+  float:left;
 }
 .analysis{
-  width: 600px;
   align-items: center;
   padding-left:50px;
   padding-top:10px;
+  width: auto;
 }
 
 .risks{
   padding-top:20px;
   align-items: center;
-  width: 600px;
+  width: auto;
 }
 
 .suggestions{
   padding-top:20px;
   align-items: center;
-  width: 600px;
-}
+  /* width: 500px; */
+  width: auto;
+} 
 
 .suggestions-list {
     list-style-type: disc;

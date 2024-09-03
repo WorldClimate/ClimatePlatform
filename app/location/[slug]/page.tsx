@@ -15,7 +15,7 @@ export default function LocationPage() {
       return (
       <QueryClientProvider client={queryClient}>
       <section id="main">
-        <div className="container mx-auto px-10">
+        <div className="px-10">
           <Overview location={location}/>
         </div>
       </section>

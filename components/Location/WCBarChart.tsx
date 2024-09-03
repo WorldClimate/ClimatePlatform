@@ -19,7 +19,7 @@ interface Props {
 }
 
 export default function WCBarChart({chartInfo, location, field}: Props) {
-    const chartWidth = 600;
+    const chartWidth = 500;
     // const hostname =
     const { isPending, error, data } = useQuery({
         queryKey: [field],
@@ -31,8 +31,8 @@ export default function WCBarChart({chartInfo, location, field}: Props) {
       if (isPending) return <SpinningCircles/>
         if (error) return 'An error has occurred: ' + error.message
         return (
-            <ResponsiveContainer width={chartWidth} height="80%">
-                <BarChart width={chartWidth} height={300} data={data.data}>
+            <ResponsiveContainer width={chartWidth} height="100%">
+                <BarChart data={data.data}>
                     <XAxis dataKey={chartInfo.xAxisKey}/>
                     <YAxis dataKey={chartInfo.yAxisKey}/>
                     <text x={chartWidth / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
