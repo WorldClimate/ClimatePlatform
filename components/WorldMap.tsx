@@ -48,7 +48,7 @@ export default function Map({currentYear}: {currentYear: number}) {
               geographies.map((geo) => {
                 const d = data.find((s) => s.ISO3 === geo.id);
                 const temp = d ? d[currentYear.toString()] * 100 : "N/A";
-                const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - Max Temp - "+temp + "°C";
+                const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - "+ currentYear +" - "+temp + "°C";
                 return (
                   <Tooltip.Provider key={geo.rsmKey}>
                       <Tooltip.Root>
