@@ -40,7 +40,7 @@ export default function Overview({ location }: Props){
     return (
     <div >
       <div className="col-span-2">
-        <section className="box features py-10">
+        <section className="box features pt-10">
           <h2 className="major"><span>{location.replace('-', ' ')}</span></h2>
         </section>
       </div>
@@ -60,7 +60,7 @@ export default function Overview({ location }: Props){
           <p>{data.locationInformation.weather}</p>
         </div>
       </div>
-      <section className="box features py-10">
+      <section className="box features pt-10">
         <h2 className="major"><span>Climate Projections & Analysis</span></h2>
       </section>
       <div className="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-4 justify-content-center">
@@ -159,7 +159,7 @@ export default function Overview({ location }: Props){
           <ChartAnalysis location={location} query_type="num_days_above_100"/>
         </div>
       </div>
-      <section className="box features py-10">
+      <section className="box features pt-10">
           <h2 className="major"><span>Top Climate Risk</span></h2>
       </section>
       <div>
@@ -167,11 +167,11 @@ export default function Overview({ location }: Props){
               <p>{data.risksAndMitigations.topRisk.description}</p>
           </div>
       <div className="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 justify-content-center">
-          <div className="py-10">
+          <div className="pt-10">
               <h4>Severe Events Timeline</h4>
               <ul className="border border-gray-200 rounded overflow-hidden shadow-md">{risks}</ul>
           </div>
-          <div className="py-10">
+          <div className="pt-10">
               <h4>Mitigation Activities</h4>
               <ul className="border border-gray-200 rounded overflow-hidden shadow-md">{mitigations}</ul>
           </div>    
