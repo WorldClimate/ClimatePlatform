@@ -44,7 +44,7 @@ export default function Overview({ location }: Props){
             <h2 className="major"><span>{location.replace('-', ' ')}</span></h2>
           </section>
         </div>
-        <div className="grid grid-flow-row-dense grid-cols-2 gap-4">
+        <div className="grid grid-flow-row-dense xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4">
             <div>
                 <img src={`/images/locations/${location}/overview.jpg`}/>
             </div>

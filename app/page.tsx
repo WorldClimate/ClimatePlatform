@@ -38,7 +38,14 @@ export default function Page() {
 							}
 							renderThumb={(props, state) => <div {...props}></div>}
 						/>
+						<br/>
+						<div>
+							<span>13 °C</span>
+							<span style={{float: "right" }}>87 °C</span>
+							<div className="" style={{ width: "300px", height: "20px", background: "linear-gradient(to right, #b1ddab, #FF5656)" }}></div>
+						</div>
 					</div>
+					
 				</section>
         <Map currentYear={currentYear}/>
 					<div className="container">

@@ -6,10 +6,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import WCLineChart from '@/components/Location/WCLineChart';
-import WCBarChart from '@/components/Location/WCBarChart';
 import Overview from '@/components/Location/Overview';
-import ChartAnalysis from '@/components/Location/ChartAnalysis';
 
 const queryClient = new QueryClient()
 
