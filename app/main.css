@@ -2462,19 +2462,15 @@ table.default thead {
 }
 
 .charting-overview{
-  height: auto;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   margin-top:50px;
-  float:left;
 }
 .analysis{
   align-items: center;
-  padding-left:50px;
   padding-top:10px;
-  width: auto;
 }
 
 .risks{
@@ -2486,13 +2482,11 @@ table.default thead {
 .suggestions{
   padding-top:20px;
   align-items: center;
-  /* width: 500px; */
   width: auto;
 } 
 
 .suggestions-list {
     list-style-type: disc;
-    padding-left: 20px;
 }
 
 .horizontal-slider {

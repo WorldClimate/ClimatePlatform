@@ -44,7 +44,7 @@ export default function Overview({ location }: Props){
           <h2 className="major"><span>{location.replace('-', ' ')}</span></h2>
         </section>
       </div>
-      <div className="container m-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="container m-auto grid grid-cols-1 xl:grid-cols-2 gap-4">
         <div>
             <img src={`/images/locations/${location}/overview.jpg`}/>
         </div>
@@ -63,7 +63,7 @@ export default function Overview({ location }: Props){
       <section className="box features py-10">
         <h2 className="major"><span>Climate Projections & Analysis</span></h2>
       </section>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-content-center">
+      <div className="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-4 justify-content-center">
         <div className="charting-overview">
           <div className="charting-block">
             <WCLineChart chartInfo={{
@@ -162,11 +162,11 @@ export default function Overview({ location }: Props){
       <section className="box features py-10">
           <h2 className="major"><span>Top Climate Risk</span></h2>
       </section>
-      <div >
+      <div>
               <p><b>{data.risksAndMitigations.topRisk.name}</b></p>
               <p>{data.risksAndMitigations.topRisk.description}</p>
           </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-content-center">
+      <div className="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 justify-content-center">
           <div className="py-10">
               <h4>Severe Events Timeline</h4>
               <ul className="border border-gray-200 rounded overflow-hidden shadow-md">{risks}</ul>
