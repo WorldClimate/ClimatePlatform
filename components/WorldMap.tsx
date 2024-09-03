@@ -47,6 +47,8 @@ export default function Map({currentYear}: {currentYear: number}) {
             {({ geographies }) =>
               geographies.map((geo) => {
                 const d = data.find((s) => s.ISO3 === geo.id);
+                const temp = d ? d[currentYear.toString()] * 100 : "N/A";
+                const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - Max Temp - "+temp + "°C";
                 return (
                   <Tooltip.Provider key={geo.rsmKey}>
                       <Tooltip.Root>
@@ -59,7 +61,8 @@ export default function Map({currentYear}: {currentYear: number}) {
                             outline: 'none'
                         },
                         hover: {
-                            outline: 'none'
+                            outline: 'none',
+                            fill: "#F53"
                         },
                         pressed: {
                             outline: 'none'
@@ -71,7 +74,8 @@ export default function Map({currentYear}: {currentYear: number}) {
                     </Tooltip.Trigger>
                     <Tooltip.Portal>
                       <Tooltip.Content className="TooltipContent" sideOffset={5}>
-                        {geo.properties.name}
+
+                        {geo.properties.name} {tempDisplay}
                         <Tooltip.Arrow className="TooltipArrow" />
                       </Tooltip.Content>
                     </Tooltip.Portal>
