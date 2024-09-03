@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
 
 const locations: { title: string; href: string; }[] = [
   {
@@ -49,7 +50,7 @@ const locations: { title: string; href: string; }[] = [
 export function Navbar() {
   const pathName = usePathname();
   return (
-    <div className="w-full hidden md:flex h-16 bg-[url('/images/overlay.png')]">
+    <div className="w-full flex h-16 bg-[url('/images/overlay.png')]">
       <Image
         src={"/images/logo-transparent copy.png"}
         alt="logo"
@@ -57,7 +58,7 @@ export function Navbar() {
         height={512}
         className="w-16 h-16 top-4 left-2"
       />
-      <NavigationMenu className="mx-auto">
+      <NavigationMenu className="hidden md:flex mx-auto">
         <NavigationMenuList className="gap-5">
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
@@ -114,6 +115,7 @@ export function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <MobileNav/>
     </div>
   );
 }

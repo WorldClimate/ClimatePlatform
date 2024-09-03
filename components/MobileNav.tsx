@@ -43,7 +43,7 @@ const locations: { title: string; href: string; }[] = [
 const MobileNav = () => {
   return (
     <Sheet>
-      <SheetTrigger className="md:hidden sticky top-2 z-20 left-[90vw] sm:left-[96vw] mb-4">
+      <SheetTrigger className="md:hidden sticky top-2 z-20 left-[90vw] sm:left-[96vw] mr-5">
         <HamburgerMenuIcon className="text-primary  w-5 h-5" />
       </SheetTrigger>
       <SheetContent>

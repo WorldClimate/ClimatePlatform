@@ -5,7 +5,7 @@ import "./globals.css";
 import "./main.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
-import MobileNav from "@/components/MobileNav";
+
 import Footer from "@/components/Footer";
 import Script from "next/script";
 const poppins = Poppins({
@@ -77,7 +77,6 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               <Navbar/>
-              <MobileNav/>
               {children}
               <Footer/>
             </ThemeProvider>

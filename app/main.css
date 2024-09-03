@@ -2143,7 +2143,8 @@ table.default thead {
   }
   /* Main */
   #main {
-    border-top-width: 0;
+    border-top-width: 20px;
+    border-bottom-width: 10px;
   }
   /* Sidebar */
   .sidebar {
@@ -2151,9 +2152,9 @@ table.default thead {
     padding-top: 50px;
   }
   /* Nav */
-  body {
+  /* body {
     padding-top: 44px;
-  }
+  } */
   body.homepage {
     padding-top: 0;
   }
