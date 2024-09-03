@@ -10,6 +10,35 @@ import {
 import { Separator } from "./ui/separator";
 import Link from "next/link";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+const locations: { title: string; href: string; }[] = [
+  {
+    title: "OXFORD",
+    href: "/location/oxford"
+  },
+  {
+    title: "MUMBAI",
+    href: "/location/mumbai"
+
+  },
+  {
+    title: "LAGOS",
+    href: "/location/lagos"
+
+  },
+  {
+    title: "NEW YORK",
+    href: "/location/new-york"
+
+  },
+  {
+    title: "SAN FRANCISCO",
+    href: "/location/san-francisco"
+  },
+  {
+    title: "JAKARTA",
+    href: "/location/jakarta"
+  },
+];
 
 const MobileNav = () => {
   return (
@@ -32,18 +61,7 @@ const MobileNav = () => {
             <div className="font-semibold hover:text-primary">
               <Link href="/locations">Locations</Link>
               <ul className="ml-5">
-                <li>
-                  <Link href="/location/oxford">Oxford</Link>
-                </li>
-                <li>
-                  <Link href="/location/mumbai">Mumbai</Link>
-                </li>
-                <li>
-                  <Link href="/location/new-york">New York</Link>
-                </li>
-                <li>
-                  <Link href="/location/san-francisco">San Francisco</Link>
-                </li>
+                {locations.map((location) => (<li key={location.title}><Link href={location.href}>{location.title}</Link></li>))}
               </ul>
             </div>
           </div>
