@@ -19,7 +19,7 @@ export default function Page() {
         			<section id="banner">
 					<div className="content">
 						<h2>Welcome to The World Climate.com</h2>
-						<p>A demonstration site where we highlight Climate analysis capabilities and explore potential business opportunities around reversing climate change.</p>
+						<p>TheWorldClimate empowers leaders with accessible, actionable climate data and analytics to drive sustainable business solutions</p>
 					</div>
 					<div className="slider-section">
 						<b><h4>{currentYear} - Average Max Temperature</h4></b>
