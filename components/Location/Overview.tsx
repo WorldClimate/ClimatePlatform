@@ -25,14 +25,14 @@ export default function Overview({ location }: Props){
 
     const risks = data.risksAndMitigations.risks.map((risk:any) =>
     <li key={risk.name} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-        <Collapsible key={risk.name}  trigger={risk.name}>
+        <Collapsible key={risk.name}  trigger={new Date(risk.date).getFullYear()+": "+risk.name}>
             <p>{risk.description}</p>
         </Collapsible>
     </li>);
     const mitigations = data.risksAndMitigations.mitigations.map((mitigation:any) =>
     <li key={mitigation.name}className="px-4 py-2 bg-white border-b last:border-none border-black-200">
         <Collapsible key={mitigation.name} trigger={mitigation.name}>
-        <b><a target="_blank" rel="noopener noreferrer" href={mitigation.url}>Link</a></b>
+        {/* {mitigation.url ? <b><a target="_blank" rel="noopener noreferrer" href={mitigation.url}>Link</a></b> : ""} */}
         <p>{mitigation.description}</p>
         </Collapsible>
     </li>);
