@@ -15,13 +15,13 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 const geoUrl = "/features.json";
 
 const colorScale = scaleLinear()
-  .domain([0.13296, 0.83875])
+  .domain([.35, .89])
   .range(["#b1ddab", "#FF5656"]);
 
 export default function Map({currentYear}: {currentYear: number}) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    csv(`/countries_minified.csv`).then((data) => {
+    csv(`/maxtemp_countries_minified_v2.csv`).then((data) => {
       setData(data);
     });
   }, []);
@@ -48,7 +48,8 @@ export default function Map({currentYear}: {currentYear: number}) {
               geographies.map((geo) => {
                 const d = data.find((s) => s.ISO3 === geo.id);
                 const temp = d ? d[currentYear.toString()] * 100 : "N/A";
-                const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - "+ currentYear +" - "+temp + "°C";
+                // const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - "+ currentYear +" - "+temp + "°C";
+                const tempDisplay = temp === 0 ? "Max Temp Not Available" : " - "+ currentYear;
                 return (
                   <Tooltip.Provider key={geo.rsmKey}>
                       <Tooltip.Root>
@@ -69,7 +70,7 @@ export default function Map({currentYear}: {currentYear: number}) {
                         }
                       }}
                       className="hover:fill-[#13cb56] my-anchor-element"
-                      fill={d ? colorScale(d[currentYear.toString()]).toString() : "#F5F4F6"}
+                      fill={d ? d[currentYear.toString()] ? colorScale(d[currentYear.toString()]).toString() : "#808080" : "#F5F4F6"}
                     />
                     </Tooltip.Trigger>
                     <Tooltip.Portal>

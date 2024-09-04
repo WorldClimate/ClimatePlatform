@@ -9,7 +9,7 @@ export default function Page() {
   const { theme } = useTheme();
   const router = useRouter();
   const startingYear = 2024;
-  const endingYear = 2080;
+  const endingYear = 2060;
   const [currentYear,setCurrentYear] = useState(startingYear);
   const changeYear = (value: number) => {
 	setCurrentYear(startingYear+value);
@@ -27,7 +27,7 @@ export default function Page() {
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
 							trackClassName="example-track"
-							max={55}
+							max={35}
 							min={0}
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
@@ -39,11 +39,11 @@ export default function Page() {
 							renderThumb={(props, state) => <div {...props}></div>}
 						/>
 						<br/>
-						<div>
+						{/* <div>
 							<span>13 °C</span>
 							<span style={{float: "right" }}>87 °C</span>
 							<div className="" style={{ width: "300px", height: "20px", background: "linear-gradient(to right, #b1ddab, #FF5656)" }}></div>
-						</div>
+						</div> */}
 					</div>
 					
 				</section>
