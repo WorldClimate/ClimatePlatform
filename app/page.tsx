@@ -9,7 +9,7 @@ export default function Page() {
   const { theme } = useTheme();
   const router = useRouter();
   const startingYear = 2024;
-  const endingYear = 2060;
+  const endingYear = 2080;
   const [currentYear,setCurrentYear] = useState(startingYear);
   const changeYear = (value: number) => {
 	setCurrentYear(startingYear+value);
@@ -27,7 +27,7 @@ export default function Page() {
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
 							trackClassName="example-track"
-							max={35}
+							max={55}
 							min={0}
 							onBeforeChange={(value, index) =>
 								console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
