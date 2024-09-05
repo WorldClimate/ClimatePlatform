@@ -22,7 +22,7 @@ export default function Page() {
 						<p>TheWorldClimate empowers leaders with accessible, actionable climate data and analytics to drive sustainable business solutions</p>
 					</div>
 					<div className="slider-section">
-						<b><h4>{currentYear} - Average Max Temperature</h4></b>
+						<b><h4>{currentYear} - Average Max Temperature (RCP8.5 projection)</h4></b>
 						<ReactSlider
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
@@ -39,11 +39,11 @@ export default function Page() {
 							renderThumb={(props, state) => <div {...props}></div>}
 						/>
 						<br/>
-						{/* <div>
-							<span>13 °C</span>
-							<span style={{float: "right" }}>87 °C</span>
+						<div>
+							<span>9 °C</span>
+							<span style={{float: "right" }}>91.875 °C</span>
 							<div className="" style={{ width: "300px", height: "20px", background: "linear-gradient(to right, #b1ddab, #FF5656)" }}></div>
-						</div> */}
+						</div>
 					</div>
 					
 				</section>
