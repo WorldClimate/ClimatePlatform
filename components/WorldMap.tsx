@@ -70,7 +70,7 @@ export default function Map({currentYear}: {currentYear: number}) {
                         }
                       }}
                       className="hover:fill-[#13cb56] my-anchor-element"
-                      fill={d ? d[currentYear.toString()] ? colorScale(d[currentYear.toString()]).toString() : "#808080" : "#F5F4F6"}
+                      fill={d ? d[currentYear.toString()] ? colorScale(d[currentYear.toString()]).toString() : "#D3D3D3" : "#F5F4F6"}
                     />
                     </Tooltip.Trigger>
                     <Tooltip.Portal>
