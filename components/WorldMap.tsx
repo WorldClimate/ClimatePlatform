@@ -15,7 +15,7 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 const geoUrl = "/features.json";
 
 const colorScale = scaleLinear()
-  .domain([.35, .89])
+  .domain([.09, .92])
   .range(["#b1ddab", "#FF5656"]);
 
 export default function Map({currentYear}: {currentYear: number}) {
