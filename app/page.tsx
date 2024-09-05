@@ -39,11 +39,11 @@ export default function Page() {
 							renderThumb={(props, state) => <div {...props}></div>}
 						/>
 						<br/>
-						<div>
+						{/* <div>
 							<span>9 °C</span>
 							<span style={{float: "right" }}>91.875 °C</span>
 							<div className="" style={{ width: "300px", height: "20px", background: "linear-gradient(to right, #b1ddab, #FF5656)" }}></div>
-						</div>
+						</div> */}
 					</div>
 					
 				</section>
