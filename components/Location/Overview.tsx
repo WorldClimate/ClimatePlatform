@@ -162,7 +162,7 @@ export default function Overview({ location }: Props){
       <section className="box features pt-10">
           <h2 className="major"><span>Top Climate Risk</span></h2>
       </section>
-      <div>
+      <div className="container mx-auto">
               <p><b>{data.risksAndMitigations.topRisk.name}</b></p>
               <p>{data.risksAndMitigations.topRisk.description}</p>
           </div>
