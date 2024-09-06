@@ -22,7 +22,7 @@ export default function Page() {
 						<p>TheWorldClimate empowers leaders with accessible, actionable climate data and analytics to drive sustainable business solutions</p>
 					</div>
 					<div className="slider-section">
-						<b><h4>{currentYear} - Max Temperature (RCP8.5 projection)</h4></b>
+						<b><h4>{currentYear} - Annual Average Daily Temperature Max (RCP8.5 projection)</h4></b>
 						<ReactSlider
 							className="horizontal-slider"
 							thumbClassName="slider-knob"
