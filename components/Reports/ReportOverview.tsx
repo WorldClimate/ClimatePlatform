@@ -6,7 +6,7 @@ import ChartAnalysisV2 from '@/components/Location/ChartAnalysisV2';
 import { useQuery } from '@tanstack/react-query'
 import Image from "next/image";
 import { usePDF } from 'react-to-pdf';
-
+import { useSearchParams } from 'next/navigation'
 interface Props {
     city_name: string,
     country_name: string,
@@ -14,7 +14,13 @@ interface Props {
     company_name: string
 }
 
-export default function Overview({ city_name, country_name, industry, company_name }: Props){
+export default function Overview(){
+  const searchParams = useSearchParams()
+  const city_name = searchParams.get("city_name") || "New York"
+  const country_name = searchParams.get("country_name") || "united states"
+  const industry = searchParams.get("industry") || "finance"
+  const company_name = searchParams.get("company_name") || "Test Company"
+  const mock_data = searchParams.get("mock") || false
     const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
     const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
     const { toPDF, targetRef } = usePDF({filename: pdfName});
@@ -32,7 +38,7 @@ export default function Overview({ city_name, country_name, industry, company_na
                   'Accept': 'application/json',
                   'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({location:location, industry: industry, secret: process.env.NEXT_PUBLIC_RISKAI_SECRET, mock: true})
+                body: JSON.stringify({location:location, industry: industry, secret: process.env.NEXT_PUBLIC_RISKAI_SECRET, mock: mock_data})
         }).then((res) =>
             
             res.json(),
