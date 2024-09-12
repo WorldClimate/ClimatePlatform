@@ -1,25 +1,13 @@
 "use client";
 import React from 'react';
-import { useQuery } from '@tanstack/react-query'
-import { SpinningCircles } from 'react-loading-icons'
 
 interface Props {
-    location: string,
-    query_type: string
+    summary: string
 }   
 
-export default function ChartAnalysis({ location,  query_type}: Props){
-    const field= 'genai_analysis_'+query_type;
-    const {isPending, error, data} = useQuery({
-        queryKey: [field],
-        queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
-            res.json(),
-          ),
-    })
-    if (isPending) return <SpinningCircles/>
-    if (error) return 'An error has occurred: ' + error.message
-    const results = JSON.parse(data);
+export default function ChartAnalysisV2({summary}: Props){
+    const results = JSON.parse(summary);
+    console.log(results)
     return(
     <div className="analysis">
         <h4>Analysis</h4>

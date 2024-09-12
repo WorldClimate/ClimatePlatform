@@ -3,37 +3,20 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, ResponsiveContainer } from 'recharts';
 import { useQuery } from '@tanstack/react-query'
 import { SpinningCircles } from 'react-loading-icons'
+import { getLineChartInfo } from '@/lib/chart_info_util'
 
 interface Props {
-    chartInfo: {
-        title: string,
-        yAxisKey: string,
-        xAxisKey: string,
-        yAxisLabel: string,
-        xAxisLabel: string,
-        lineOneName: string,
-        lineOneDataKey: string,
-        lineTwoName: string,
-        lineTwoDataKey: string
-    }
-    location: string
-    field: string
+    query_type: string,
+    chartData: any
 }
 
-export default function Chart({chartInfo, location, field}: Props) {
+export default function Chart({chartData, query_type}: Props) {
     const chartWidth = 600;
-    const { isPending, error, data } = useQuery({
-        queryKey: [field],
-        queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
-            res.json(),
-          ),
-      })
-      if (isPending) return <SpinningCircles/>
-        if (error) return 'An error has occurred: ' + error.message
+    const chartInfo = getLineChartInfo(query_type)
+    console.log(chartData)
             return (
                 <ResponsiveContainer width={chartWidth} height="100%">
-                    <LineChart data={data.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+                    <LineChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
                     <text x={chartWidth / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
                         <tspan fontFamily="Open Sans" fontSize="18">{chartInfo.title}</tspan>
                     </text>
@@ -43,7 +26,7 @@ export default function Chart({chartInfo, location, field}: Props) {
                     <CartesianGrid stroke="#f5f5f5" />
                     <Line name={chartInfo.lineOneName} type="monotone" dataKey={chartInfo.lineOneDataKey} stroke="#ff7300" yAxisId={0} dot={false}/>
                     <Line name={chartInfo.lineTwoName} opacity={0.25} type="monotone" dataKey={chartInfo.lineTwoDataKey} stroke="#7bb08a" yAxisId={0} dot={false}/>
-                    <ReferenceLine x={2024} label="2024" />
+                    {/* <ReferenceLine x={2024} label="2024" /> */}
                     </LineChart>
                 </ResponsiveContainer>
             );
