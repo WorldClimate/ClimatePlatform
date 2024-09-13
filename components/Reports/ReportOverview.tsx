@@ -39,7 +39,7 @@ export default function Overview(){
                   'Accept': 'application/json',
                   'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({location:location, industry: industry, secret: process.env.NEXT_PUBLIC_RISKAI_SECRET, mock: mock_data})
+                body: JSON.stringify({location:location, industry: industry, secret: "magic", mock: mock_data})
         }).then((res) =>
             
             res.json(),
