@@ -16,10 +16,10 @@ interface Props {
 
 export default function Overview(){
   const searchParams = useSearchParams()
-  const city_name = searchParams.get("city_name") || "New York"
-  const country_name = searchParams.get("country_name") || "united states"
-  const industry = searchParams.get("industry") || "finance"
-  const company_name = searchParams.get("company_name") || "Test Company"
+  const city_name = searchParams.get("city_name") || "Not Provided"
+  const country_name = searchParams.get("country_name") || "Not Provided"
+  const industry = searchParams.get("industry") || "Not Provided"
+  const company_name = searchParams.get("company_name") || "Not Provided"
   const mock_data = searchParams.get("mock") || false
     // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
     const hostname = "https://walrus-app-24aml.ondigitalocean.app"
@@ -96,7 +96,12 @@ export default function Overview(){
         </header>
         <section className="box features pt-10">
           <h2 className="major"><span>Climate Related Industry Risks</span></h2>
-          <div className="grid grid-cols-2 justify-content-center">
+          <div className="text-center">
+            <h3>Company: {company_name}</h3><br/>
+            <h3>Industry: {industry}</h3><br/>
+            <h3>GICS SubIndustry: {data.industry_info.subindustry}</h3><br/>
+          </div>
+         <div className="grid grid-cols-2 justify-content-center">
             <div>
             <h3 className="text-center">Industry Risks</h3>
               {risks}
