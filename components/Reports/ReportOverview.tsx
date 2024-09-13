@@ -21,7 +21,8 @@ export default function Overview(){
   const industry = searchParams.get("industry") || "finance"
   const company_name = searchParams.get("company_name") || "Test Company"
   const mock_data = searchParams.get("mock") || false
-    const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
+    // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
+    const hostname = "https://walrus-app-24aml.ondigitalocean.app"
     const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
     const { toPDF, targetRef } = usePDF({filename: pdfName});
     var location = {
