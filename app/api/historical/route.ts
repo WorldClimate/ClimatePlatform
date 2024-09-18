@@ -1,15 +1,14 @@
 import { NextRequest, NextResponse } from "next/server"
 export const dynamic = 'force-dynamic' // defaults to force-static
-import * as fs from 'fs';
-import * as path from 'path';
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { GetObjectCommand, S3, S3Client } from "@aws-sdk/client-s3";
 
 export async function GET(req: NextRequest) {
+  
   console.log(req.nextUrl.searchParams.get("city_name"))
-  const city_name = req.nextUrl.searchParams.get("city_name")
-  const country_name = req.nextUrl.searchParams.get("country_name")
+  const city_name = req.nextUrl.searchParams.get("city_name")?.toLowerCase()
+  const country_name = req.nextUrl.searchParams.get("country_name")?.toLowerCase()
   const field = req.nextUrl.searchParams.get("field")
-  const client = new S3Client({});
+  const client = new S3Client();
   var s3Path;
   if(field==='overview'){
     s3Path = `climate_data/${country_name}/${city_name}/${field}.json`;
