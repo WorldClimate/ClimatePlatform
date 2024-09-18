@@ -20,30 +20,30 @@ import MobileNav from "@/components/MobileNav";
 const locations: { title: string; href: string; }[] = [
   {
     title: "OXFORD",
-    href: "/location/oxford"
+    href: "/location/united-kingdom/oxford"
   },
   {
     title: "MUMBAI",
-    href: "/location/mumbai"
+    href: "/location/india/mumbai"
 
   },
   {
     title: "LAGOS",
-    href: "/location/lagos"
+    href: "/location/nigeria/lagos"
 
   },
   {
     title: "NEW YORK",
-    href: "/location/new-york"
+    href: "/location/united-states/new-york"
 
   },
   {
     title: "SAN FRANCISCO",
-    href: "/location/san-francisco"
+    href: "/location/united-states/san-francisco"
   },
   {
     title: "JAKARTA",
-    href: "/location/jakarta"
+    href: "/location/indonesia/jakarta"
   },
 ];
 

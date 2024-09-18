@@ -14,17 +14,18 @@ interface Props {
         xAxisLabel: string,
         barDataKey: string
     }
-    location: string
+    country_name: string,
+    city_name: string,
     field: string
 }
 
-export default function WCBarChart({chartInfo, location, field}: Props) {
+export default function WCBarChart({chartInfo, country_name, city_name, field}: Props) {
     const chartWidth = 600;
     // const hostname =
     const { isPending, error, data } = useQuery({
         queryKey: [field],
         queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
+          fetch(`/api/historical?country_name=${country_name}&city_name=${city_name}&field=${field}`).then((res) =>
             res.json(),
           ),
       })

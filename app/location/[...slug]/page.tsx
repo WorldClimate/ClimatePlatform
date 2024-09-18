@@ -11,12 +11,14 @@ import Overview from '@/components/Location/Overview';
 const queryClient = new QueryClient()
 
 export default function LocationPage() {
-  const location = useParams().slug.toString()
+  console.log('Slugs:'+useParams().slug);
+  const country_name = useParams().slug[0].toString();
+  const city_name = useParams().slug[1].toString();
       return (
       <QueryClientProvider client={queryClient}>
       <section id="main">
         <div className="px-10">
-          <Overview location={location}/>
+          <Overview country_name={country_name} city_name={city_name}/>
         </div>
       </section>
 </QueryClientProvider>

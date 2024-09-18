@@ -9,14 +9,15 @@ import Collapsible from 'react-collapsible';
 import { BsChevronDown } from "react-icons/bs"; //react-icon
 
 interface Props {
-    location: string
+  country_name: string,
+  city_name: string
 }
 
-export default function Overview({ location }: Props){
+export default function Overview({ country_name, city_name  }: Props){
     const {isPending, error, data} = useQuery({
         queryKey: ['overview'],
         queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=overview`).then((res) =>
+          fetch(`/api/historical?city_name=${city_name}&country_name=${country_name}&field=overview`).then((res) =>
             res.json(),
           ),
     })
@@ -41,12 +42,12 @@ export default function Overview({ location }: Props){
     <div >
       <div className="col-span-2">
         <section className="box features pt-10">
-          <h2 className="major"><span>{location.replace('-', ' ')}</span></h2>
+          <h2 className="major"><span>{city_name.replace('-', ' ')}</span></h2>
         </section>
       </div>
       <div className="container m-auto grid grid-cols-1 xl:grid-cols-2 gap-4">
         <div>
-            <img src={`/images/locations/${location}/overview.jpg`}/>
+            <img src={`/images/locations/${city_name}/overview.jpg`}/>
         </div>
         <div>
           <h4>Key Geopolitical Facts</h4>
@@ -76,9 +77,9 @@ export default function Overview({ location }: Props){
                 lineOneDataKey:'10_year_rolling_avg',
                 lineTwoName:'Annual Max Temp',
                 lineTwoDataKey:'tempmax'
-              }} location={location} field="tempmax" />
+              }} country_name={country_name} city_name={city_name} field="tempmax" />
           </div>
-          <ChartAnalysis location={location} query_type="tempmax"/>
+          <ChartAnalysis country_name={country_name} city_name={city_name} query_type="tempmax"/>
         </div>
         <div className="charting-overview">
           <div className="charting-block">
@@ -92,9 +93,9 @@ export default function Overview({ location }: Props){
                 lineOneDataKey:'10_year_rolling_avg',
                 lineTwoName:'Annual Min Temp',
                 lineTwoDataKey:'tempmin'
-              }} location={location} field="tempmin" />
+              }} country_name={country_name} city_name={city_name} field="tempmin" />
           </div>
-          <ChartAnalysis location={location} query_type="tempmin"/>
+          <ChartAnalysis country_name={country_name} city_name={city_name}  query_type="tempmin"/>
         </div>
         <div className="charting-overview">
           <div className="charting-block">
@@ -108,9 +109,9 @@ export default function Overview({ location }: Props){
                   lineOneDataKey:'10_year_rolling_avg',
                   lineTwoName:'Annual Precip (mm)',
                   lineTwoDataKey:'precip'
-                }} location={location} field="precip" />
+                }} country_name={country_name} city_name={city_name}  field="precip" />
             </div>
-            <ChartAnalysis location={location} query_type="precip"/>
+            <ChartAnalysis country_name={country_name} city_name={city_name}  query_type="precip"/>
         </div>
         <div className="charting-overview">
           <div className="charting-block">
@@ -124,9 +125,9 @@ export default function Overview({ location }: Props){
                   lineOneDataKey:'10_year_rolling_avg',
                   lineTwoName:'Yearly Average Dew Point (C)',
                   lineTwoDataKey:'dew'
-                }} location={location} field="dew" />
+                }} country_name={country_name} city_name={city_name}  field="dew" />
             </div>
-            <ChartAnalysis location={location} query_type="dew"/>
+            <ChartAnalysis country_name={country_name} city_name={city_name}  query_type="dew"/>
         </div>
         <div className="charting-overview">
           <div className="charting-block">
@@ -139,9 +140,9 @@ export default function Overview({ location }: Props){
                   yAxisLabel:'# Days Above 90F',
                   barDataKey:'num_days_above_90'
                 }
-              } location={location} field="num_days_above_90" />
+              } country_name={country_name} city_name={city_name}  field="num_days_above_90" />
             </div>
-          <ChartAnalysis location={location} query_type="num_days_above_90"/>
+          <ChartAnalysis country_name={country_name} city_name={city_name}  query_type="num_days_above_90"/>
         </div>
         <div className="charting-overview">
           <div className="charting-block">
@@ -154,9 +155,9 @@ export default function Overview({ location }: Props){
                 yAxisLabel:'# Days Above 100F',
                 barDataKey:'num_days_above_100'
               }
-            } location={location} field="num_days_above_100" />
+            } country_name={country_name} city_name={city_name}  field="num_days_above_100" />
           </div>
-          <ChartAnalysis location={location} query_type="num_days_above_100"/>
+          <ChartAnalysis country_name={country_name} city_name={city_name}  query_type="num_days_above_100"/>
         </div>
       </div>
       <section className="box features pt-10">

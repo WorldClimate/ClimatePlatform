@@ -16,16 +16,17 @@ interface Props {
         lineTwoName: string,
         lineTwoDataKey: string
     }
-    location: string
+    country_name: string,
+    city_name: string,
     field: string
 }
 
-export default function Chart({chartInfo, location, field}: Props) {
+export default function Chart({chartInfo, country_name, city_name, field}: Props) {
     const chartWidth = 600;
     const { isPending, error, data } = useQuery({
         queryKey: [field],
         queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
+          fetch(`/api/historical?country_name=${country_name}&city_name=${city_name}&field=${field}`).then((res) =>
             res.json(),
           ),
       })

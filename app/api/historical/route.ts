@@ -2,25 +2,42 @@ import { NextRequest, NextResponse } from "next/server"
 export const dynamic = 'force-dynamic' // defaults to force-static
 import * as fs from 'fs';
 import * as path from 'path';
+import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 export async function GET(req: NextRequest) {
-  console.log(req.nextUrl.searchParams.get("location"))
-  const location = req.nextUrl.searchParams.get("location")
+  console.log(req.nextUrl.searchParams.get("city_name"))
+  const city_name = req.nextUrl.searchParams.get("city_name")
+  const country_name = req.nextUrl.searchParams.get("country_name")
   const field = req.nextUrl.searchParams.get("field")
-  var JSONFilePath;
+  const client = new S3Client({});
+  var s3Path;
   if(field==='overview'){
-    JSONFilePath = path.resolve('data/'+location+'/'+field+'.json');
+    s3Path = `climate_data/${country_name}/${city_name}/${field}.json`;
   }
   else if (field?.includes('genai_analysis')){
-    JSONFilePath = path.resolve('data/'+location+'/'+field+'.json');
+    s3Path = `climate_data/${country_name}/${city_name}/${field}.json`;
   }
   else{ 
-    JSONFilePath = path.resolve('data/'+location+'/combined_'+field+'.json');
+    s3Path = `climate_data/${country_name}/${city_name}/combined_${field}.json`;
   }
-  const fileContent = fs.readFileSync(JSONFilePath, { encoding: 'utf-8' });
-  const jsonresponse = JSON.parse(fileContent);
+  const command = new GetObjectCommand({
+    Bucket: process.env.AWS_S3_BUCKET_NAME,
+    Key: s3Path,
+  });
+  try {
+    const response = await client.send(command);
+    // The Body object also has 'transformToByteArray' and 'transformToWebStream' methods.
+    if (!response.Body) {
+      throw new Error("Response body is undefined");
+    }
+    const str = await response.Body.transformToString();
+    const jsonresponse = JSON.parse(str);
+    return NextResponse.json(jsonresponse, { status: 200, statusText: "OK" });
+  } catch (err) {
+    console.error(err);
+  }
 
-return NextResponse.json(jsonresponse, { status: 200, statusText: "OK" });
+
 
   
 }

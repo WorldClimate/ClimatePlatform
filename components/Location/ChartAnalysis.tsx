@@ -4,16 +4,17 @@ import { useQuery } from '@tanstack/react-query'
 import { SpinningCircles } from 'react-loading-icons'
 
 interface Props {
-    location: string,
+    country_name: string,
+    city_name: string,
     query_type: string
 }   
 
-export default function ChartAnalysis({ location,  query_type}: Props){
+export default function ChartAnalysis({ country_name, city_name,  query_type}: Props){
     const field= 'genai_analysis_'+query_type;
     const {isPending, error, data} = useQuery({
         queryKey: [field],
         queryFn: () =>
-          fetch(`/api/historical?location=${location}&field=${field}`).then((res) =>
+          fetch(`/api/historical?country_name=${country_name}&city_name=${city_name}&field=${field}`).then((res) =>
             res.json(),
           ),
     })
