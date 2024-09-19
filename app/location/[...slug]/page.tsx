@@ -7,13 +7,15 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import Overview from '@/components/Location/Overview';
-
+import { notFound } from 'next/navigation'
 const queryClient = new QueryClient()
 
 export default function LocationPage() {
-  console.log('Slugs:'+useParams().slug);
-  const country_name = useParams().slug[0].toString();
-  const city_name = useParams().slug[1].toString();
+  const params = useParams().slug;
+  if(params.length < 2){ return notFound()}
+
+  const country_name = params[0].toString();
+  const city_name = params[1].toString();
       return (
       <QueryClientProvider client={queryClient}>
       <section id="main">
