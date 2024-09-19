@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const city_name = req.nextUrl.searchParams.get("city_name")?.toLowerCase()
   const country_name = req.nextUrl.searchParams.get("country_name")?.toLowerCase()
   const field = req.nextUrl.searchParams.get("field")
-  const client = new S3Client();
+  const client = new S3Client({region: process.env.AWS_REGION});
   var s3Path;
   if(field==='overview'){
     s3Path = `climate_data/${country_name}/${city_name}/${field}.json`;
