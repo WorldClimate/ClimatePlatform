@@ -51,10 +51,10 @@ const lineChartInfo: { [key: string]: {
         xAxisLabel:'Year',
         yAxisKey:'dew',
         yAxisLabel:'Yearly Average Dew Point (C)',
-        lineTwoName:'10 Year Rolling Avg',
-        lineTwoDataKey:'10_year_rolling_avg',
-        lineOneName:'Yearly Average Dew Point (C)',
-        lineOneDataKey:'dew'
+        lineOneName:'10 Year Rolling Avg',
+        lineOneDataKey:'10_year_rolling_avg',
+        lineTwoName:'Yearly Average Dew Point (C)',
+        lineTwoDataKey:'dew'
     }
 }
 
