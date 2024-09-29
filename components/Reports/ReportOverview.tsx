@@ -21,8 +21,8 @@ export default function Overview(){
   const industry = searchParams.get("industry") || "Not Provided"
   const company_name = searchParams.get("company_name") || "Not Provided"
   const mock_data = searchParams.get("mock") || false
-    // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
-    const hostname = "https://walrus-app-24aml.ondigitalocean.app"
+    const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
+    // const hostname = "https://walrus-app-24aml.ondigitalocean.app"
     const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
     const { toPDF, targetRef } = usePDF({filename: pdfName});
     var location = {
@@ -47,15 +47,24 @@ export default function Overview(){
     })
     if (isPending) return <img src="/images/loading-spinner.svg" className="m-auto"/>
     if (error) return 'An error has occurred: ' + error.message
-    const riskMitigationData = JSON.parse(data.risk_results);
-    const risks = riskMitigationData.map((result:any) =>
+    const riskMitigationData = data.risk_results;
+    const riskAndMitigations = riskMitigationData.map((result:any) =>
     <li key={result.risk} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-        {result.risk}
+        Risk - {result.risk}<br/>
+        Mitigation - {result.mitigation}
     </li>);
     const mitigations = riskMitigationData.map((result:any) =>
-      <li key={result.mitigation} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-    {result.mitigation}
-</li>);
+      <div key={result.risk} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
+       <b>Risk</b><br/>
+       {result.risk}<br/>
+       <b>Mitigation</b><br/>
+        {result.mitigation}<br/>
+        <b>Opportunities</b><br/>
+        {result.opportunities.map((opportunity:any) => (
+          <li key={opportunity} className='list-inside list-disc'>{opportunity}</li>
+        ))}
+      </div>);
+
     const line_charts = data.locations_results.analyses.map((analysis:any) =>
       analysis.query_type.chart_type === 'line' ?
       <div key={analysis.query_type.name} className="charting-overview">
@@ -90,26 +99,22 @@ export default function Overview(){
             className="w-32 h-32"/>
             
           </div>
-
           <h1 className="py-10 text-4xl font-bold text-center">TheWorldClimate RiskAI Analysis</h1>
           <h1 className="text-4xl font-bold text-center">{company_name}</h1>
         </header>
         <section className="box features pt-10">
-          <h2 className="major"><span>Climate Related Industry Risks</span></h2>
+          <h2 className="major"><span>Overview</span></h2>
           <div className="text-center">
             <h3>Company: {company_name}</h3><br/>
             <h3>Industry: {industry}</h3><br/>
             <h3>GICS SubIndustry: {data.industry_info.subindustry}</h3><br/>
+            <p className='pb-10'>{data.industry_summary.industry_summary}</p>
           </div>
-         <div className="grid grid-cols-2 justify-content-center">
+          <h2 className="major"><span>Climate Related Industry Risks, Mitigations & Opportunities</span></h2>
+         <div className="grid grid-cols-1 justify-content-center">
             <div>
-            <h3 className="text-center">Industry Risks</h3>
-              {risks}
+            <ul>{mitigations}</ul>
             </div>
-            <div>
-            <h3 className="text-center">Industry Risk Mitigations</h3>
-              {mitigations}
-              </div>
           </div>
         </section>
         <section className="box features pt-10">
