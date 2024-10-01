@@ -112,6 +112,17 @@ export function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
+            <Link href="/report" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={`font-semibold h-[45px] w-[97px] hover:translate-y-1 transition-all duration-500 ${
+                  pathName === "/report"
+                    ? ""
+                    : "bg-transparent hover:bg-[#C1CAC5]"
+                } ${navigationMenuTriggerStyle()}`}
+              >
+                GENERATE REPORT
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
