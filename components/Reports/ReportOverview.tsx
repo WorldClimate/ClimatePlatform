@@ -21,8 +21,8 @@ export default function Overview(){
   const industry = searchParams.get("industry") || "Not Provided"
   const company_name = searchParams.get("company_name") || "Not Provided"
   const mock_data = searchParams.get("mock") || false
-    // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
-    const hostname = "https://walrus-app-24aml.ondigitalocean.app"
+  const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
+    // const hostname = "https://walrus-app-24aml.ondigitalocean.app"
     const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
     const { toPDF, targetRef } = usePDF({filename: pdfName});
     var location = {
@@ -48,21 +48,14 @@ export default function Overview(){
     if (isPending) return <img src="/images/loading-spinner.svg" className="m-auto"/>
     if (error) return 'An error has occurred: ' + error.message
     const riskMitigationData = data.risk_results;
-    const riskAndMitigations = riskMitigationData.map((result:any) =>
-    <li key={result.risk} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-        Risk - {result.risk}<br/>
-        Mitigation - {result.mitigation}
-    </li>);
     const mitigations = riskMitigationData.map((result:any) =>
-      <div key={result.risk} className="px-4 py-2 bg-white border-b last:border-none border-black-200">
-       <b>Risk</b><br/>
-       {result.risk}<br/>
-       <b>Mitigation</b><br/>
-        {result.mitigation}<br/>
-        <b>Opportunities</b><br/>
+      <div key={result.risk} className="border-solid px-4 py-2 bg-white border-b last:border-none border-black-200">
+       <div className="my-5"><b>Risk</b> - {result.risk}</div>
+       <div className="my-5"><b>Mitigation</b> - {result.mitigation}</div>
+       <div className="my-5"><b>Opportunities</b>
         {result.opportunities.map((opportunity:any) => (
-          <li key={opportunity} className='list-inside list-disc'>{opportunity}</li>
-        ))}
+          <li key={opportunity} className='list-inside list-disc'>{removeNumberDot(opportunity)}</li>
+        ))}</div>
       </div>);
 
     const line_charts = data.locations_results.analyses.map((analysis:any) =>
@@ -111,10 +104,8 @@ export default function Overview(){
             <p className='pb-10'>{data.industry_summary.industry_summary}</p>
           </div>
           <h2 className="major"><span>Climate Related Industry Risks, Mitigations & Opportunities</span></h2>
-         <div className="grid grid-cols-1 justify-content-center">
-            <div>
-            <ul>{mitigations}</ul>
-            </div>
+         <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 justify-content-center">
+            {mitigations}
           </div>
         </section>
         <section className="box features pt-10">
@@ -131,4 +122,8 @@ export default function Overview(){
       </section>
     </div>
     </div>)
+}
+
+function removeNumberDot(str: string){
+  return str.replace(/^\w+\./, "");
 }
