@@ -5,7 +5,6 @@ import WCBarChartV2 from '@/components/Location/WCBarChartV2';
 import ChartAnalysisV2 from '@/components/Location/ChartAnalysisV2';
 import { useQuery } from '@tanstack/react-query'
 import Image from "next/image";
-import { useRouter } from 'next/router';
 import { usePDF } from 'react-to-pdf';
 
 interface Props {
@@ -22,11 +21,6 @@ export default function ReportOverview(Props: Props) {
   const industry = Props.industry || "Not Provided"
   const company_name = Props.company_name|| "Not Provided"
   const mock_data = Props.mock_data || false
-  const router = useRouter();
-  const handleBack = () => {
-    router.push('/report');
-  };
-
   // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
     const hostname = "https://walrus-app-24aml.ondigitalocean.app"
     const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
@@ -87,7 +81,6 @@ export default function ReportOverview(Props: Props) {
     return (
     <div>
       <button className="outline-black outline text-black focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 m-5" onClick={() => toPDF()}>Download PDF</button>
-      <button className="outline-black outline text-black focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 m-5" onClick={() => handleBack()}>Generate New</button>
       <div ref={targetRef}>
           <div  className="col-span-2">
             <header className='text-center py-10'>
