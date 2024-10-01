@@ -45,7 +45,7 @@ export default function Overview(){
             res.json(),
          ),
     })
-    if (isPending) return <div><img src="/images/loading-spinner.svg" className="m-auto"/><br/><h3>LOADING...</h3></div>
+    if (isPending) return <div><img src="/images/loading-spinner.svg" className="m-auto"/><br/><h3 className='text-center'>LOADING...</h3></div>
     if (error) return 'An error has occurred: ' + error.message
     const riskMitigationData = data.risk_results;
     const mitigations = riskMitigationData.map((result:any) =>
