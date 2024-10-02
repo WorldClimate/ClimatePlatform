@@ -8,6 +8,7 @@ import { Navbar } from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { GoogleAnalyticsTracking } from "@/components/GoogleAnalyticsTracking";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -68,6 +69,7 @@ export default function RootLayout({
     <html lang="en">
         <head>
         <Script src="https://kit.fontawesome.com/4c9efe62f8.js"/>
+        <GoogleAnalyticsTracking/>
         </head>
           <body className={poppins.className}>
             <ThemeProvider
