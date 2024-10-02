@@ -50,7 +50,7 @@ export default function ReportOverview(Props: Props) {
     const riskMitigationData = data.risk_results;
     const mitigations = riskMitigationData.map((result:any) =>
       <div key={result.risk} className="border-solid px-4 py-2 bg-white border-b last:border-none border-black-200">
-       <div className="my-5"><b>Risk</b> - {result.risk}</div>
+       <div className="my-5"><b>Risk & Impact</b> - {result.risk}</div>
        {/* <div className="my-5"><b>Impact</b> - {result.impact}</div> */}
        <div className="my-5"><b>Mitigation</b> - {result.mitigation}</div>
        <div className="my-5"><b>Opportunities</b>
