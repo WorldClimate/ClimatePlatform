@@ -41,19 +41,19 @@ export default function ReportDataEntry({ setReportState }: ReportDataEntryProps
                 <div className='grid grid-cols-1 xl:grid-cols-2 gap-10'>
                     <div>
                         <label htmlFor="company_name">Company Name:</label>
-                        <input type="text" id="company_name" name="company_name" />
+                        <input type="text" id="company_name" name="company_name" className="bg-transparent"/>
                     </div>
                     <div>
                         <label htmlFor="industry">Industry:</label>
-                        <input type="text" id="industry" name="industry" />
+                        <input type="text" id="industry" name="industry" className="bg-transparent"/>
                     </div>
                     <div>
                         <label htmlFor="country_name">Country:</label>
-                        <input type="text" id="country_name" name="country_name" />
+                        <input type="text" id="country_name" name="country_name"  className="bg-transparent"/>
                     </div>
                     <div>
                         <label htmlFor="city_name">City:</label>
-                        <input type="text" id="city_name" name="city_name" />
+                        <input type="text" id="city_name" name="city_name"  className="bg-transparent"/>
                     </div>
                 </div>
                 {/* <div className="flex items-center">
