@@ -33,7 +33,7 @@ export default function ReportOverview(Props: Props) {
         queryKey: ['report'],
         queryFn: () =>
         fetch(`${hostname}/generate`, {
-                signal: AbortSignal.timeout(60000),
+                signal: AbortSignal.timeout(300000),
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',
