@@ -19,12 +19,14 @@ const queryClient = new QueryClient({
   },
 })
 
-const persister = createSyncStoragePersister({
-  storage: window.localStorage,
-})
+
 
 export default function ReportPage(req: NextRequest) {
       const [reportState, setReportState] = useState({city_name: "", company_name: "", country_name: "", industry: "", mock_data: false, inputComplete: false});
+      if(typeof window !=='undefined'){
+       const persister = createSyncStoragePersister({
+          storage: window.localStorage,
+        })
       return (
         <Suspense fallback={<img src="/images/loading-spinner.svg" className="m-auto"/>}>
           <PersistQueryClientProvider
@@ -41,4 +43,5 @@ export default function ReportPage(req: NextRequest) {
           </PersistQueryClientProvider>
         </Suspense>
     );
+  }
 }
