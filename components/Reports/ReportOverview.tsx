@@ -24,8 +24,8 @@ export default function ReportOverview(Props: Props) {
   const industry = Props.industry || "Not Provided"
   const company_name = Props.company_name|| "Not Provided"
   const mock_data = Props.mock_data || false
-  // const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
-  const hostname = "https://walrus-app-24aml.ondigitalocean.app"
+  const hostname = process.env.NEXT_PUBLIC_RISKAI_HOST
+  // const hostname = "https://walrus-app-24aml.ondigitalocean.app"
   const pdfName = `TheWorldClimate Risk Analysis - ${company_name}.pdf`
   const { toPDF, targetRef } = usePDF({filename: pdfName});
   var location = {
@@ -42,7 +42,7 @@ export default function ReportOverview(Props: Props) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify({location:location, industry: industry, secret: "magic", mock: mock_data})
+              body: JSON.stringify({location:location, industry: industry, company_name:company_name, secret: "magic", mock: mock_data})
       }).then((res) =>{
           return res.json()
           }
