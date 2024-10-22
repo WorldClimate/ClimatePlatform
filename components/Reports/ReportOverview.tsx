@@ -59,7 +59,7 @@ export default function ReportOverview(Props: Props) {
       <div className="my-5"><b>Mitigation</b> - {result.mitigation}</div>
       <div className="my-5"><b>Opportunities</b>
       {result.opportunities.map((opportunity:any) => (
-        <li key={opportunity} className='list-inside list-disc'>{removeNumberDot(opportunity)}</li>
+        <li key={opportunity} className='list-outside list-disc'>{removeNumberDot(opportunity)}</li>
       ))}</div>
     </div>);
 
@@ -86,6 +86,7 @@ export default function ReportOverview(Props: Props) {
     <div>
       <button className="outline-black outline text-black focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 m-5" onClick={() => toPDF()}>Download PDF</button>
       <div ref={targetRef}>
+      <div className="m-12">
           <div  className="col-span-2">
             <header className='text-center py-10'>
           <div className="flex justify-center items-center">          
@@ -125,6 +126,7 @@ export default function ReportOverview(Props: Props) {
     <section className="box features pt-10">
       <h2 className="major"><span></span></h2>
     </section>
+  </div>
   </div>
   </div>)
 }
