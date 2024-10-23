@@ -81,7 +81,11 @@ export default function ReportOverview(Props: Props) {
         <ChartAnalysisV2 summary={analysis.summary}/>
       </div> : ""
     );
-
+  const sdgs = data.sdg_results.top_sdgs.map((sdg:any) =>
+    <div>
+      <h3>{sdg.sdg} - {sdg.description}</h3>
+      <p>{sdg.industry_relation}</p>
+    </div>);
     return (
     <div>
       <button className="outline-black outline text-black focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 m-5" onClick={() => toPDF()}>Download PDF</button>
@@ -112,6 +116,12 @@ export default function ReportOverview(Props: Props) {
         <h2 className="major"><span>Climate Related Industry Risks, Mitigations & Opportunities</span></h2>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 justify-content-center">
           {mitigations}
+        </div>
+      </section>
+      <section className="box features pt-10">
+        <h2 className="major"><span>Top Sustainable Development Goals - {industry}</span></h2>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 justify-content-center">
+          {sdgs}
         </div>
       </section>
       <section className="box features pt-10">
