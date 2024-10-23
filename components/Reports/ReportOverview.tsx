@@ -82,7 +82,7 @@ export default function ReportOverview(Props: Props) {
       </div> : ""
     );
   const sdgs = data.sdg_results.top_sdgs.map((sdg:any) =>
-    <div>
+    <div key={sdg.sdg}>
       <h3>{sdg.sdg} - {sdg.description}</h3>
       <p>{sdg.industry_relation}</p>
     </div>);
