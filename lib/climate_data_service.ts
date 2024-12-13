@@ -11,7 +11,7 @@ async function callClimateDataService(latlong : Array<number>, query_type : Quer
         'precip': `?query=annually(pr,sum)&from_date=${start_date}T00%3A00%3A00.000Z&to_date=${end_date}T00%3A00%3A00.000Z&latitude=${latlong[0]}&longitude=${latlong[1]}&apikey=${process.env.CLIMATE_API_KEY}`,
         'dew':`?query=annually(dew,mean)&from_date=${start_date}T00%3A00%3A00.000Z&to_date=${end_date}T00%3A00%3A00.000Z&latitude=${latlong[0]}&longitude=${latlong[1]}&apikey=${process.env.CLIMATE_API_KEY}`
         }
-    var url = `https://beta.climatedataservice.com/v6/series/csv${url_dictionary[query_type]}`
+    var url = `https://api.climatedataservice.com/v6/series/csv${url_dictionary[query_type]}`
     try {
         fetch(url).then((res) =>
             res.json(),
